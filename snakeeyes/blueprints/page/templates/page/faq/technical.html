@@ -1,0 +1,561 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Technical</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. What material is recommended for skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are generally 3 types of skirting materials available in the market.
+        <br>
+        Hardwood skirting boards
+        <ul>
+          <li>
+            These are the most expensive skirting but also the most resilient. They are tough and durable to withstand damage caused on impact and knocks. Installation however is much more difficult. It looks great and feels great.
+          </li>
+        </ul>
+        <br>
+        Softwood skirting boards
+        <ul>
+          <li>
+            Softwood skirting boards are known for their flexibility and range of styles. They are commonly easier to install and sand down for the edges. You can apply a coat of varnishing on top of softwood skirting and it will look great.
+          </li>
+        </ul>
+        <br>
+        MDF skirting boards
+        <ul>
+          <li>
+            MDF is the acronym of ‘medium density fibreboard’. It is a man-made board that is reliable and affordable. The thing that makes it reliable is it is durable and not easily warp or swell when expose to moisture. It is commonly used in kitchens and toilets where the skirting are more susceptible to dampness. Both hardwood and softwood can warp and swell in damp environments if not being treated immediately.
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Can vinyl flooring be installed on walls and ceiling? can install laminate /vinyl flooring on walls and ceiling ?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          It is a great option to use vinyl tiles on walls. Often people will use it for aesthetic purposes. Other main reasons is that vinyls are much cheaper and looks much better than existing alternatives. They are also easy to clean and it matches the home style easily. Do check out our gallery for more examples.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Is vinyl flooring water proof?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Yes, due to its material it is waterproof. The brands we carry also has other attributes such as anti slip.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Would it be okay if we install a thick underlying mat below the vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The thicker the underlying mat, the softer the floor would feel. Normally underlying mat also mask any uneven surfaces and provides a smooth and flat surface. If a surface is not clean thoroughly and has no underlying mat, any bumps can be felt afterwards. Our bare feet would be sensitive enough to detect it however, it will be a huge hassle to try to fix it later on.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. Is it possible to coat vinyl flooring with a layer of epoxy both for durability and look? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are known design methods to lay epoxy above a finished floor for a grandeur look. However it is not likely to be done over vinyl flooring because there would be a risk of flexing or movement. Even if your vinyl tiles are glued down to the floor, any movement will damage the epoxy floor and create a bigger mess. It is just not worth it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. Is there anything you need to lay below vinyl flooring? What is commonly laid below vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We call those underlayments. Depending on your product and budget, some vinyl flooring comes with their own underlayment therefore no additional cushion is needed. There are situations where you are considering to just install vinyl floorings above an existing flooring. 
+        </p>
+        <br>
+        There are several benefits to using underlying mats however different subfloor surface will reap different results.
+        <br>
+        Concrete/cement render subfloor
+        <ul>
+          <li>
+            If you’re laying vinyl tiles over concrete subfloors, underlying mats adds cushion to help make the floor softer to walk on. It also acts as an extra vapor barrier above the subfloor to reduce any risk of moisture penetration. Lastly, underlying mats may provide thermal properties to help keep the flooring warmer during the night because concrete gets cold easily.
+          </li>
+        </ul>
+        <br>
+        Wood subfloor
+        <ul>
+          <li>
+            If you’re laying vinyl tiles over parquet or wooden subfloors, underlying mats acts as a moisture barrier and also a cushion or sound insulation. Wooden subfloors may trap moisture and produce sound when being walk on top.
+          </li>
+        </ul>
+        <br>
+        Tile subfloor
+        <ul>
+          <li>
+            The good thing about tile subfloor is there won’t have moisture trap beneath the underlying mats. Sound also is low however the gaps between tiles may be felt over time if your vinyl tiles are thinner. Therefore you may want to consider a thicker tile to be laid above.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. What are the types of underlay commonly used beneath the vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are several types of underlayments. Picking the right underlayment highly depends on your subfloor mainly divided into hard floors or soft floors.
+        <br>
+        Plywood
+        <ul>
+          <li>
+            Plywood has a smooth face and a rough downside and is best suited for many dry applications with an even surface. The thickness will compensate for the rough surface. Do not use this in places with high moisture density areas such as kitchens and toilets.
+          </li>
+        </ul>
+        <br>
+        Underlayment Panels
+        <ul>
+          <li>
+            They make installation goes faster and active acts as a moisture barrier. It is ideal for vinyl flooring and laminated flooring as it lifts the slightly above the solid surface.
+          </li>
+        </ul>
+        <br>
+        Rubber underlayment
+        <ul>
+          <li>
+            It has great sound insulation.
+          </li>
+          <li>
+            Versatile and durable.
+          </li>
+          <li>
+            Popular to lay above tiles or stone subfloor.
+          </li>
+          <li>
+            However it is not suitable for vinyl flooring.
+          </li>
+          <li>
+            It is expensive compared to other underlayments.
+          </li>
+        </ul>
+        <br>
+        Cork underlayment
+        <br>
+        Pros
+        <ul>
+          <li>
+            Rather cost effective.
+          </li>
+          <li>
+            Great thermal properties.
+          </li>
+          <li>
+            Will expand and contract with your flooring.
+          </li>
+          <li>
+            Allows air to flow freely underneath
+          </li>
+        </ul>
+        <br>
+        Cons
+        <ul>
+          <li>
+            Not recommended at areas with high moisture content.
+          </li>
+          <li>
+            May need additional moisture barriers which increases costing.
+          </li>
+          <li>
+            Will need polyurethane adhesive which is more expensive.
+          </li>
+        </ul>
+        <br>
+        Foam underlayment
+        <ul>
+          <li>
+            The most inexpensive among all underlayments.
+          </li>
+          <li>
+            Excellent moisture resistant.
+          </li>
+          <li>
+            Mold and mildew resistant.
+          </li>
+          <li>
+            Reduces sound effectively.
+          </li>
+          <li>
+            Easy to install.
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. What do i need to consider when choosing an underlayment?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Keep your underlayment as thin as possible. Thicker underlayments will begin to pose problems since they can create offset issues between rooms with different flooring materials. Transitions can be problematic if the floor level is substantially higher in one room than in the adjacent room. And in rooms with low ceilings, thick underlayments may even pose a problem by shortening the height of the space.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. What are the common practices or standards when it comes to laying vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>A good workmanship will set good standards for the quality of your vinyl flooring. One of the notable standards are how tight the tiles are interlocked among each other. This will require hammering with care to ensure no gaps can be seen or felt. Gapping that arises after time are signs or poor standards and insufficient hammering during installation which is not tight.
+        <br>
+        Do ensure adequate gentle hammering is made to all tiles
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Would it be a problem if my floor has an uneven surface prior to laying vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>All uneven floors are bad for laying any types of flooring. However the way to go over it is to re-even the surface commonly by installing underlayments with flexible materials such as vinyl tiles. This is because conforms easily to the shape of your floor over time to provide a smooth surface.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. How do I fix an uneven floor surface?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are 3 known methods
+          <br>
+          Self-leveling compound
+          <ul>
+            <li>
+              This compound is normally utilized in concrete floors and wooden subfloors. It is a mixture in powder foam to create a paste and is spreaded over the affected area.
+            </li>
+          </ul>
+          <br>
+          Plwywood
+          <ul>
+            <li>
+              This method is the quickest and easiest and commonly used on concrete or wood subfloor.
+            </li>
+            <li>
+              Ensure the nails are thick enough to pierce through all layers all the way to the floor below.
+            </li>
+          </ul>
+          <br>
+          Grinder
+          <ul>
+            <li>
+              In case there are lumps on the floor, you may remove it using grinders or sanders. This is very work intensive and should only be considered as a last option.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. How to release air traps in vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p> Air traps happened when there is poor to no moisture barrier commonly from wooden subfloors. The moisture then rises but is unable to be release therefore it is trapped and overtime foams a bubble like surface. The common way to get rid of it is to simply use a needle to create a tiny hole to release the trap air beneath it.
+        <br>
+        In case of large air bubbles, removing the entire flooring is necessary. Contact your installer or contact us and we will arrange repair works for you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          13. Would vinyl flooring absorb sound and act as a sound insulation?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, vinyl flooring are excellent sound absorbers due its properties that is backed with foam that cushions your steps. Foams acts as a sound absorber as well.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading14">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+          14. What are the pros and cons of installing vinyl flooring on walls?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Pros
+          <br>
+          <ul>
+            <li>Flexible</li>
+            <li>Cost Effective</li>
+            <li>Beautiful</li>
+            <li>Easy to clean as compared to tiles</li>
+            <li>Easy to install</li>
+          </ul>
+          <br>
+          Cons
+          <ul>
+            <li>Surface has to be even and clean prior installation.</li>
+            <li>Have to be proper moisture insulated to prevent air bubbles.</li>
+            <li>Have to be glued properly which takes more time.</li>
+            <li>More challenging for DIYers.</li>
+            <li>Poor installation will lead to poor workmanship</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading15">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+          15. What vinyl flooring thickness should be used? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The thickness of vinyl flooring is highly dependent on the criteria of your home. The thickness will range between 2 to 5mm. Do compare the factors below as a guide to picking your thickness.
+        <br>
+        Solid or soft surface
+        <ul>
+          <li>Do you prefer the feeling to walk on solid floor or softer surface?</li>
+          <li>The thicker the tile, the softer and warmer it feels.</li>
+          <li>Elderly people should refrain from colder surface.</li>
+        </ul>
+        <br>
+        Do you have children or pets
+        <ul>
+          <li>Thicker tiles have better sound absorption.</li>
+          <li>Great for children that is active and running a lot</li>
+          <li>Same goes to pets</li>
+        </ul>
+        <br>
+        How is the traffic in your area?
+        <ul>
+          <li>The higher the traffic, the thicker you should opt for.</li>
+          <li>For living rooms, it is recommended to use 3mm or higher due to the high activity happening.</li>
+          <li>Thicker tiles also means better impact resistance and durability.</li>
+          <li>You may also use a thicker tile in your bedroom to have a warmer floor as compared to tiles.</li>
+          <li>3mm should be used on stairs as well as people are often going up and down in a hurry. It softens the impact from your knee joints as well.</li>
+        </ul>
+        <br>
+        What is your budget?
+        <ul>
+          <li>The thicker the tile, the more expensive.</li>
+          <li>Try to avoid 2mm tiles entirely just to save some money.</li>
+          <li>However, 2mm tiles are recommended to be used on walls and ceilings because they are lighter and put less stress on the glue.</li>
+          <li>2mm tiles are commonly used in smaller rooms like storerooms or laundry spaces.</li>
+          <li>5mm is the thickest tile you can buy. It is almost similar to wood. Most people use it on uneven surfaces to skip underlayments. Doing so however will compromise the softness and sound absorption of your flooring.</li>
+        </ul>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading16">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+          16. What are the known issues that may occur during hacking of existing flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Damage of subfloor surface
+          <ul>
+            <li>When improper methods such as blunt hammering or drillings are being used to hack the tiles, there may be damages to the subfloor surface and may pose a problem during vinyl tiling installation. This is because vinyl installation needs to be installed on an even surface. Patching damaged floors may cause uneven surfaces that may affect your vinyl tiles in the long run.</li>
+          </ul>
+          <br>
+          Cracks on walls due to shockwaves
+          <ul>
+            <li>Older homes will have to be more careful from shockwaves resulting from improper hammering will send fine lines on the surface of your grout of your wall. You do not want to folk out unnecessary repair costs.</li>
+          </ul>
+          <br>
+          Dust control
+          <ul>
+            <li>Dust may fly all over the place if it is not properly controlled especially during hacking and sanding. We do have procedures to for dust control to minimise the spread of dust from contaminating your walls or other part of your home.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+</div>
+
+{% endblock %}

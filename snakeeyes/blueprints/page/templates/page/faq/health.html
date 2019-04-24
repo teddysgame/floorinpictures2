@@ -1,0 +1,110 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Health</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Is there health hazard with vinyl flooring as compared to other flooring materials such as tiles and laminated flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>  There are substantial claims about health hazard with vinyl floorings. Reputable brands have greatly improved their quality of products and reduced their chemical inputs and have to adhere by strict regulations. However, inferior brands may not follow such strict procedures and they can be quite harmful to children and toddlers if being expose frequently. Therefore it is crucial that you get your vinyl tiles from a reputable source.
+        <br>
+        There are frequent known cases where an installer would claim to provide you vinyl tiles from reputable brands but delivers and installed an inferior product instead just to thicken their margins. Do seek for a certificate from your installer at the very beginning upon delivery of materials as most reputable suppliers nowadays offers their consumers genuine certificates. Another advice is to provide good air ventilation for your home daily.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Are there dangerous chemicals involved in the manufacturing process of vinyl flooring?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Vinyl flooring is a manmade substance made from PVC which releases phthalates such as DEHP (diethyelhexyl phthalate). Vinyl chloride is also a carcinogen and a volatile organic compound (VOC). In some cases, other chemicals such as dioxins, ethylene dichloride are also released by PVC and some cheap inferior brands may contain formaldehyde which may be harmful to younger children or animals.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

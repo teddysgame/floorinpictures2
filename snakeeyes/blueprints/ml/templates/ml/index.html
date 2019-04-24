@@ -1,0 +1,774 @@
+{% extends 'layouts/base.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}Floor in Pictures: Everything about vinyl flooring in Malaysia{% endblock %}
+{% block meta_description %}Explore over hundreds of vinyl floorings from dozens of suppliers all on a single platform!{% endblock %}
+
+{% block body %}
+
+<!-- Banner's style -->
+<style>
+.bannercontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  margin-bottom: 60px;
+}
+
+/*.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}*/
+
+/*.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}*/
+
+/*.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}*/
+
+/*.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}*/
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textshadow {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.h1larger {
+  font-size: 55px;
+}
+</style>
+
+<!-- Banner -->
+<div class="bannercontainer" id="targetsearch">
+  <img src="{{ url_for('static', filename='images/assets/others/large.png') }}" alt="text" style="width: 100%;">
+  <div class="centered">
+    <h1 class="textshadow h1larger">Let us help you search for the perfect vinyl floor!</h1>
+    <div align="center">
+      <h4 class="textshadow">Upload a floor image here (jpg, jpeg, png)</h4>
+      <br>
+      <form action="" method=post enctype=multipart/form-data onSubmit="return formValidation()">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      <input type=file name=file id="noimage">
+      <br>
+      <!--    <input type=submit value=Upload onclick="getcost()"> -->
+      <input class="uploadbutton" type=submit value="Find my vinyl now" onclick="getcost()">
+      </form>
+      <h6 class="text">If you click on 'Find my vinyl now' above, you agree to our <a href="{{ url_for('page.terms') }}">terms and privacy policies.</a></h6>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <!-- Gallery should start here? -->
+  <!-- Photo Grid -->
+  <!-- Script for gallery -->
+  <script>
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column");
+
+    // Declare a loop variable
+    var i;
+  </script>
+  <!-- End of js -->
+  <!-- import css -->
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  /* Create two equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE 10 */
+    flex: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .btn:hover {
+    background-color: #ddd;
+  }
+
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  /*Gallery thumbnail*/
+  * {box-sizing: border-box;}
+    
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .containerimg {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+
+  .containerimg:hover .overlay {
+    opacity: 1;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .bold {
+    font-weight:bold;
+  }
+
+  .textpadding {
+    padding: 50px;
+  }
+
+  .uploadbutton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.7;
+    border-radius: 8px;
+  }
+
+  .uploadbutton:hover {
+    background-color: #3e8e41;
+    opacity: 1;
+  }
+
+  .divborder{
+    border:1px solid #DCDCDC;
+  }
+
+  </style>
+
+  <script>
+  function formValidation() {
+    if(document.getElementById("noimage").value==""||document.getElementById("noimage").value==null)
+    {
+        alert("No image selected. To proceed, upload an image of a flooring you would like to get more info with!");
+    return false;
+    }
+    else
+        return true;
+    }
+  </script>
+  
+      <!-- template should have been here-->
+
+  <style type="text/css">
+    .h2padding{
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+    .howtodesc {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+    .surveypadding {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  </style>
+
+  <div class="container">
+    <h1 class="bold h2padding">Here's how we can help.</h1  >
+    <h4><font color="#DCDCDC">We built tools for your flooring quest.</font></h4>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="http://192.168.99.100:8000/#targetsearch"><img src="{{ url_for('static', filename='images/assets/others/how13.png') }}" style="width:50%"></a>
+        <h4 align="center"><font color="#DCDCDC">Method 1:</font></h4>
+        <h4 class="bold" align="center">Search Engine</h4>
+        <h5 class="howtodesc">Search the perfect floor tile by uploading an image to our platform <a href="#top">above</a>. We will match the tiles for you being used in the image.</h5>
+      </div>
+      <div class="col-sm-4">
+        <a href="http://192.168.99.100:8000/#targetsurvey"><img src="{{ url_for('static', filename='images/assets/others/how2.png') }}" style="width:50%"></a>
+        <h4 align="center"><font color="#DCDCDC">Method 2:</font></h4>
+        <h4 class="bold" align="center">Survey</h4>
+        <h5 class="howtodesc">Unsure of your flooring colour? Take a survey to see what type of flooring best suits your environment right now.</h5>
+      </div>
+      <div class="col-sm-4">
+        <a href="http://192.168.99.100:8000/#targetgallery"><img src="{{ url_for('static', filename='images/assets/others/how31.png') }}" style="width:50%"></a>
+        <h4 align="center"><font color="#DCDCDC">Method 3:</font></h4>
+        <h4 class="bold" align="center">Gallery</h4>
+        <h5 class="howtodesc">Browse through our flooring gallery to find a flooring that you may like to get its flooring and materials information.</h5>
+      </div>
+    </div>
+  </div>
+
+  <hr id="targetsurvey">
+  <!-- Survey starts here -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <br>
+        <br>
+        <br>
+        <H2 class="h2padding bold">How do you know if a colour is suitable for your floor?</H2>
+        <h4>Unsure of a colour? Let's find out!</h4>
+        <br>
+        <br>
+        <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('survey.surveys') }}">Take the survey</a>
+      </div>
+      <div class="col-md-8">
+        <img src="{{ url_for('static', filename='images/assets/others/slr.png') }}" style="width: 70%;" class="surveypadding">
+      </div>      
+    </div>    
+  </div>
+
+  <!-- Here are what people are saying about vinyl and laminated -->
+
+  <hr id="targetgallery">
+  <!-- Start html for gallery -->
+  <br>
+
+  <!-- Header -->
+  <div>
+    <h2 class="bold h2padding">Try it! Click on any picture below!</h2>
+    <h4>Identify vinyl tiles through pictures</h4>
+    <!-- <button class="btn" onclick="one()">1</button>
+    <button class="btn active" onclick="two()">2</button>
+    <button class="btn" onclick="four()">4</button> -->
+  </div>
+      
+  <br>
+
+  <div class="row"> 
+    <div class="column containerimg">
+      <a href="{{ url_for('page.g1') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/livingroom/cp.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+      <!-- <div class="overlay">Living Room</div> -->
+      <a href="{{ url_for('page.g2') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/livingroom/so.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+      
+      <a href="{{ url_for('page.g3') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/livingroom/dc2.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+    </div>
+    <div class="column containerimg">
+      <a href="{{ url_for('page.g4') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/kitchen/gb.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+
+      <a href="{{ url_for('page.g5') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/kitchen/sw.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+
+      <a href="{{ url_for('page.g6') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/kitchen/eb.jpg') }}" style="height:40.5%" alt="Avatar" class="image"></a>
+
+    </div>  
+    
+    <div class="column containerimg">
+      <a href="{{ url_for('page.g7') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/bathroom/ew.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+
+      <a href="{{ url_for('page.g8') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/bathroom/la.jpg') }}" style="height:55.5%" alt="Avatar" class="image"></a>
+
+    </div>
+
+    <div class="column containerimg">
+      <a href="{{ url_for('page.g9') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/bedroom/dc.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+
+      <a href="{{ url_for('page.g10') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/bedroom/ev.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
+
+      <a href="{{ url_for('page.g8') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/bedroom/la.jpg') }}" style="height:40.5%" alt="Avatar" class="image"></a>
+
+    </div>
+  </div>
+
+  <!-- Gallery should end here -->
+  <!-- Top sellers -->
+  <style type="text/css">
+    .tabletops {
+        border:none;
+        border-collapse: collapse;
+    }
+
+    .tabletops td {
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        padding: 30px;
+    }
+
+    .tabletops td:first-child {
+        border-left: none;
+    }
+
+    .tabletops td:last-child {
+        border-right: none;
+    }
+
+    .imgtile {
+    width: 100px;
+    padding: 5px;
+    }
+  </style>
+
+  <!-- Get months for table -->
+  <script type="text/javascript">
+    function myFunction() {
+      var d = new Date();
+      var n = d.getMonth();
+      if (n == 0) {
+        getthismonth = "January";
+      } else if (n == 1) {
+        getthismonth = "Febuary";
+      } else if (n == 2) {
+        getthismonth = "March";
+      } else if (n == 3) {
+        getthismonth = "April";
+      } else if (n == 4) {
+        getthismonth = "May";
+      } else if (n == 5) {
+        getthismonth = "June";
+      } else if (n == 6) {
+        getthismonth = "July";
+      } else if (n == 7) {
+        getthismonth = "August";
+      } else if (n == 8) {
+        getthismonth = "September";
+      } else if (n == 9) {
+        getthismonth = "October";
+      } else if (n == 10) {
+        getthismonth = "November";
+      } else {
+        getthismonth = "December";
+      }
+      document.getElementById("currentmonth").innerHTML = getthismonth;
+      if (n == 0) {
+        getlastmonth = "December";
+      } else if (n == 1) {
+        getlastmonth = "January";
+      } else if (n == 2) {
+        getlastmonth = "Febuary";
+      } else if (n == 3) {
+        getlastmonth = "March";
+      } else if (n == 4) {
+        getlastmonth = "April";
+      } else if (n == 5) {
+        getlastmonth = "May";
+      } else if (n == 6) {
+        getlastmonth = "June";
+      } else if (n == 7) {
+        getlastmonth = "July";
+      } else if (n == 8) {
+        getlastmonth = "August";
+      } else if (n == 9) {
+        getlastmonth = "September";
+      } else if (n == 10) {
+        getlastmonth = "October";
+      } else {
+        getlastmonth = "November";
+      }
+      document.getElementById("lastmonth").innerHTML = getlastmonth;
+      if (n == 0) {
+        getlast2month = "November";
+      } else if (n == 1) {
+        getlast2month = "December";
+      } else if (n == 2) {
+        getlast2month = "January";
+      } else if (n == 3) {
+        getlast2month = "Febuary";
+      } else if (n == 4) {
+        getlast2month = "March";
+      } else if (n == 5) {
+        getlast2month = "April";
+      } else if (n == 6) {
+        getlast2month = "May";
+      } else if (n == 7) {
+        getlast2month = "June";
+      } else if (n == 8) {
+        getlast2month = "July";
+      } else if (n == 9) {
+        getlast2month = "August";
+      } else if (n == 10) {
+        getlast2month = "September";
+      } else {
+        getlast2month = "October";
+      }
+      document.getElementById("last2month").innerHTML = getlast2month;
+    }
+
+    window.onload = myFunction;
+  </script>
+
+<!-- This is tile collection -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>  
+        <H2 class="h2padding bold">Dive right in to our collection!</H2>
+        <!-- <h4>Unsure of a colour? Let's find out!</h4> -->
+        <br>
+        <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('tc.tilecollection') }}">Go to album</a>
+      </div>
+      <div class="col-md-6" align="right">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- <h3>Light Adolesense</h3> -->
+        <a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}"></a><a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}"></a><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}"></a><a href="{{ url_for('tc.oxidizedwood') }}" title="Oxidized Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/oxidizedwood.jpg') }}"></a><a href="{{ url_for('tc.paleoak') }}" title="Pale Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/paleoak.jpg') }}"></a><br>
+        <!-- <h3>Elder Brilliance</h3> -->
+        <a href="{{ url_for('tc.balsawood') }}" title='Balsa Wood'><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/balsawood.jpg') }}"></a><a href="{{ url_for('tc.easternhemlock') }}" title="Eastern Hemlock"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/easternhemlock.jpg') }}"></a><a href="{{ url_for('tc.spruceomorika') }}" title="Spruce Omorika"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/spruceomorika.jpg') }}"></a><a href="{{ url_for('tc.tulepowood') }}" title="Tulepo Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/tulepowood.jpg') }}"></a><a href="{{ url_for('tc.oakfalcata') }}" title="Oak Falcata"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/oakfalcata.jpg') }}"></a><br>
+        <!-- <h3>Solid Wood</h3> -->
+        <a href="{{ url_for('tc.blackwood') }}" title="Black Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/blackwood.jpg') }}"></a><a href="{{ url_for('tc.boxelderwood') }}" title="Boxelder Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/boxelderwood.jpg') }}"></a><a href="{{ url_for('tc.fanooak') }}" title="Fano Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/fanooak.jpg') }}"></a><a href="{{ url_for('tc.hazelplum') }}" title="Hazel Plum"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/hazelplum.jpg') }}"></a><a href="{{ url_for('tc.oakespana') }}" title="Oak Espana"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/oakespana.jpg') }}"></a>
+        <br>
+        <br>
+        <br>
+      </div>      
+    </div>    
+  </div>
+  <hr>
+
+  <h2 class="bold h2padding">Top 3 best sellers in the past 3 months</h2>
+  <h4>These are what the awesome vinyl communities are choosing</h4>
+  <h4><font color="#DCDCDC">Click on a tile for more info</font></h4>
+  <!--   -->
+  <br>
+  <div>
+    <table class="tabletops">
+      <tr>
+        <th class="text-center">Trending</th>
+        <th class="text-center" id="currentmonth"></th>
+        <th class="text-center" id="lastmonth"></th>
+        <th class="text-center" id="last2month"></th>
+      </tr>
+      <tr>
+        <td>#1</td>
+        <td><a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.catalpawood') }}" title="Catalpa Wood"><img src="{{ url_for('static', filename='images/img/4/catalpawood.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}" style="height:100px; width:100px"></a></td>            
+      </tr>
+      <tr>
+        <td>#2</td>
+        
+        <td><a href="{{ url_for('tc.cherryprunus') }}" title="Cherry Prunus"><img src="{{ url_for('static', filename='images/img/5/cherryprunus.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}" style="height:100px; width:100px"></a></td>
+      </tr>
+      <tr>
+        <td>#3</td>
+        <td><a href="{{ url_for('tc.mountainash') }}" title="Mountain Ash"><img src="{{ url_for('static', filename='images/img/6/mountainash.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}" style="height:100px; width:100px"></a></td>
+        <td><a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}" style="height:100px; width:100px"></a></td>
+      </tr>
+    </table>
+  </div>
+
+  <h6 class="textpadding"><font color="#DCDCDC">based on our in-house data from thousands of orders from all suppliers</font></h6>
+
+  <style type="text/css">
+    .imgasseen {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  </style>
+  <!-- Brands we carry -->
+  <div class="row">
+    <div class="col-md-3">
+      <a href="{{ url_for('page.brands') }}"><img class="imgasseen" src="{{ url_for('static', filename='images/assets/brands/floordepot.png') }}" align="left" style="width: 60%;"></a>
+    </div>
+    <div class="col-md-9">
+      <h2 class="bold h2padding" align="center">What are we?</h2>
+      <h4>We are an independent vinyl flooring distributor, interior designer and subcontractor for vinyl floorings in Malaysia. We are currently carrying vinyl tiles from Floordepot. All our tiles are sent directly from their storage to your site. We offer installation services for you.</h4>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Top questions ask -->
+  <h2 class="bold h2padding">Top 5 frequently asked questions for vinyl flooring</h2>
+  <h4><font color="#DCDCDC">We curate from thousands of questions from customers and online just for you.</font></h4>
+  <br>
+  <div>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              1. What are the pros and cons of using vinyl flooring?
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>
+              Pros
+              <ul>
+                <li>Moisture resistant</li>
+                <li>Tough and resistant to wear and tear</li>
+                <li>Can be used on all floors, walls and even ceiling</li>
+                <li>Can DIY</li>
+                <li>Cheap to install</li>
+                <li>Low maintenance and easy to clean</li>
+                <li>Hundreds of patterns to choose from</li>
+              </ul>
+              <br>
+              Cons
+              <ul>
+                <li>Difficult to remove if glued down</li>
+                <li>Can be punctured with sharp objects</li>
+                <li>Hard to recycle</li>
+                <li>Discolouring when exposed with excessive UV ray</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              2. What is the difference between vinyl flooring versus laminate flooring?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Laminated flooring normally refers to the flooring that is HDF board, clicked together to form wooden flooring lookalike. Vinyl is like the name said is flooring made of vinyl material. Normally in office but it is also used for housing where it looks like the laminated floor above and normally advertised as waterproof flooring.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              3. What are the common problems that will arise on vinyl floorings?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>
+              <ul>
+                <li>
+                  A common problem would be gappings.
+                </li>
+                <li>
+                  Other known problems are also air traps or air bubbles.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingfour">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+              4. What kind of flooring should I use?  
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+          <div class="card-body">
+            <a href="{{ url_for('survey.surveys') }}">Click to take our survey here!</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingfive">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+              5. Is it easy to DIY for vinyl flooring?
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Vinyl flooring is one of the favourite choice for DIY enthusiast when it comes to flooring systems. It is quick, easy to assemble and does not require heavy machinery upon installation. Thanks to its solid interlocking attributes, the outcome of the installation would also look professionally done. People are often confident to DIY after spending some time studying its processes. If you are interested to DIY yourself, we highly encourage you to do so and watch the following DIY Youtube videos below. Just order the vinyl tiles from us and we will deliver it straight to your site address within 3 working days. You may also purchase other accessories to help you with the installation yourself as well from the link here. It is the most satisfying experience you can ever receive from the outcome. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4 class="textpadding">Got more questions? visit our <a href="{{ url_for('page.general') }}">FAQ.</a></h4>
+  <hr>
+
+  <style type="text/css">
+    .chatbubble {
+      padding-top: 70px;
+      padding-right: 170px;
+      padding-left: 170px;
+      padding-bottom: 50px;
+      font-family: "Monospace";
+    }
+
+    .chatperson {
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      font-family: "Courier New";
+      text-align: justify;
+    }
+  </style>
+
+  <!-- Comparison here -->
+  <h2 class="bold h2padding">Vinyl characteristics</h2>
+  <!-- <br>
+  <div>
+    <table class="table">
+      <tbody align="center">
+        <tr>
+          <td><img src="{{ url_for('static', filename='images/assets/others/vinylcomparison.jpg') }}" style="height:200px; width:200px"></td>
+        </tr>
+        <tr>
+          <td>Vinyl</td>
+        </tr>
+        <tr>
+          <td><li>100% plastic</li></td>
+        </tr>
+        <tr>
+          <td><li>Superior resistance to moisture</li></td>
+        </tr>
+        <tr>
+          <td><li>Natural looking</li></td>
+        </tr>
+        <tr>
+          <td><li>Can be used in bathrooms and kitchen</li></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br> -->
+
+  <!-- benefits -->
+  <style type="text/css">
+    .h4padding {
+      padding-left: 350px;
+      padding-right: 150px;
+    }
+  </style>
+  <img src="{{ url_for('static', filename='images/assets/others/Advantage.png') }}" class="imgasseen" style="width: 70%">
+
+  <!-- Meet the team -->
+  <h2 class="bold h2padding">Meet the team and installers!</h2>
+  <h4>We are a team of local installers ready to help you transform your flooring</h4>
+  <img src="{{ url_for('static', filename='images/assets/team/team.png') }}" class="imgasseen" style="width: 90%">
+  
+  <hr>
+  <!-- Warranty -->
+  <div class="container">
+    <h2 class="bold h2padding">Goodbye defects and cut throats.</h2>
+    <h4><font color="#DCDCDC">Why buy from us?</font></h4>
+    <br>
+    <img src="{{ url_for('static', filename='images/assets/others/warranties.png') }}" align="left" style="width:20%">
+    <br>
+    <h4 class="h4padding">We <span class="bold">protect you</span> from cut throats by nasty installers that supplies you with inferior <span><font color="red">toxic</font></span> tile products. We will delivery tiles directly from the manufacturers to your site address. All our tiles comes with a genuine certificate.
+      <br>
+      <br>
+
+    In case of defects, just snap a photo and send it to us and we will replace a new tile to you no questions ask!</h4>
+    <br>
+  </div>
+  <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}">Get me protected</a>
+
+  <!-- DIY -->
+  <style type="text/css">
+    .iframepadding {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+  </style>
+
+  <h2 class="h2padding bold">looking to DIY?</h2>
+  <br>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rxAsvy6g13k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+
+  <h3 class="bold">Reference</h3>
+  <h4>We also highly recommend you to read this post that is found on <a href="https://forum.lowyat.net/index.php?s=237a7f6ee54252bbe2ec189838d45b83&showtopic=3858031&hl=vinyl" target="_blank">forum.lowyat.net</a>. It is comprehensive sharing of how to DIY including all the equipment, sources and progress involved.</h4>
+
+  <!-- Review -->
+
+  <!-- Experience -->
+
+  <div align="center">
+    <h3 class="textpadding">Confident to start? </h3>
+    <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}">Get a quote</a>
+    <h5>or visit our comprehensive <a href="{{ url_for('page.general') }}">FAQ</a> for more info.</h5>
+  </div>
+  <br><br><br><br><br>
+</div>
+ 
+{% endblock %}

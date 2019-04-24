@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Brands{% endblock %}
+{% block meta_description %}These are brands we carry on our platform{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+.card-img-top {
+  height: 15rem;
+  object-fit: cover;
+}
+</style>
+
+<h3>Brands we carry</h3>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <!-- Floor Depot -->
+      <div class="card" style="width: 18rem; height: 30rem;">
+        <img src="{{ url_for('static', filename='images/assets/brands/floordepot.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Floor Depot</h5>
+          <p class="card-text">FLOOR DEPOT was established in 2001. Floor Depot offers home renovation services, interior design as well as wood laminated flooring.</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <!-- Coming Soon -->
+      <div class="card" style="width: 18rem; height: 30rem;">
+        <img src="{{ url_for('static', filename='images/assets/brands/yourbrandhere.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Supplier Inquiry</h5>
+          <p class="card-text">Interested to supply to our platform? We are actively looking for new brands to carry on board our platform!</p>
+          <a href="{{ url_for('contact.index') }}" class="btn btn-primary">Apply here!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

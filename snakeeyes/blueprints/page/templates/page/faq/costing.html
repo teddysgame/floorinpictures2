@@ -1,0 +1,239 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Costing</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Roughly how much does it cost to install vinyl flooring per sqft? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>  It all depends on the type of vinyl tiles you are looking for. We built in a calculator on our platform that you are able to calculate and compare among different brands to suit your budget.
+        <br>
+        Do take into consideration to set aside an additional 10% to your budget to allocate for wastages.
+        <br>
+        We will return and refund unopened vinyl tiles that is not being used.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Roughly how much does it cost to purchase tiles flooring per sqft? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>A rule of thumb of a standard tile cost is normally doubled of vinyl tiles.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Roughly how much does it cost to purchase laminated flooring per sqft?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>A rule of thumb of a standard tile cost is 50% higher of vinyl tiles.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Roughly how much does it cost to purchase cement flooring per sqft?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. Roughly how much does it cost to purchase floating vinyl flooring per sqft?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It highly depends on the type of tiles that you choose. You may check out our calculator for comparison.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. How much does it cost to install skirting per meter run? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. How much does it cost to remove existing parquet flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Market rate is about RM1 to RM2 for foreign labour hacking. We charge somewhere from RM2 to 3 depending on how big the floor size is. The reason we are charging above market rate is because our team possess the following criteria:
+
+        <ul>
+          <li>We are all local Malaysians installer.</li>
+          <li>We have strict standards of procedures to hack.</li>
+          <li>We take into consideration into protecting your property from damaging the unnecessary.</li>
+          <li>We have strict procurements to dispose of the waste</li>
+          <li>We will send e-reports to you about the progress at 10-50-100 percent together with all known issues during your hacking process.</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. How much does it cost to remove existing tiles flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. What are the hidden cost we don’t normally see?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          <ul>
+            <li>Water and electricity cost are uncounted for although not substantial since most hacking or installation works are done within 1 or 2 days.</li>
+            <li>Uneven surface patching cost which are mostly necessary for a smooth surface vinyl flooring.</li>
+            <li>Door trimming cost in case doors are too low to be safe to close and open. Door trimming cost about RM50 to RM80 depending on the type of door.</li>
+            <li>Skirtings and glues are often underestimated.</li>
+            <li>Fire doors will not be able to trim as it is against regulations. Do take into consideration.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+</div>
+
+{% endblock %}

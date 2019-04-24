@@ -1,0 +1,52 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Flooring Consultation{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .bold {
+    font-weight:  bold;
+  }
+  .imgpadding {
+    padding-top: 150px;
+  }
+</style>
+  <div class="row">
+    <h1 class="bold" align="center">Get floor recommendation through our survey.</h1>
+    <h4 align="center">we need to determine the characteristics of your current environment to determine the most suitable floor for you.</h4>
+    <br>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      
+    </div>
+    <div class="col-md-5">
+      
+      <form action="/survey" method = "POST">
+
+        <!-- include the WTF configuration -->
+        {{ form.csrf_token }}
+
+        <!-- show the questions -->
+        <h4>{{ form.Q1.label }}</h4> {{ form.Q1 }}
+        <h4>{{ form.Q2.label }}</h4> {{ form.Q2 }}
+        <h4>{{ form.Q3.label }}<a title=" How large is large? just based it on your own intuition."><img src="{{ url_for('static', filename='images/assets/others/qm.png') }}" height="15px"/></a></h4> {{ form.Q3 }}
+        <h4>{{ form.Q4.label }}<a title=" Bright colours are light colours to your eyes. For example, white, beige and light pinks are all bright colours. Dark colours are black, dark blue, dark brown etc."><img src="{{ url_for('static', filename='images/assets/others/qm.png') }}" height="15px"/></a></h4> {{ form.Q4 }}
+        <h4>{{ form.Q5.label }}<a title=" Bright colours are light colours to your eyes. For example, white, beige and light pinks are all bright colours. Dark colours are black, dark blue, dark brown etc."><img src="{{ url_for('static', filename='images/assets/others/qm.png') }}" height="15px"/></a></h4> {{ form.Q5 }}
+        <h4>{{ form.Q6.label }}<a title=" High traffic means how much activity is happening above your tiles. It is also measured by number of people walking above the tiles on a daily basis. A home with only 3 occupants are considered low traffic."><img src="{{ url_for('static', filename='images/assets/others/qm.png') }}" height="15px"/></a></h4> {{ form.Q6 }}
+
+        <!-- submit button -->
+        {{ form.submit }}
+      </form>
+    </div>
+    <div class="col-md-5">
+      <img class="imgpadding" src="{{ url_for('static', filename='images/assets/others/survey.png') }}" style="width: 80%;">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+{% endblock %}

@@ -1,0 +1,217 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Others & Consideration</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Is vinyl flooring tile lines obvious? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Depending on the pattern on your tiles, it may be quite obvious. However do not confuse grout lines with gappings. Gappings are a common problem especially towards thinner tiles.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. What else should i know and consider during my planning for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Do ask yourself and have answers for all this before you undertake this installation. It will save a you a ton of headaches. Do speak to your installer regarding this as well.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Does your flooring have an even surface? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Vinyl floorings require an even surface to prevent problems from surfacing in the future. Do not close an eye to this.
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Is there adequate amount of room available under your door to allow for vinyl installation?  
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>You would not want your door to scratch your floor in case it expands. It will also cost you money to trim the door. So ensure you have the right thickness of your vinyl flooring.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. Does your door open outwards or inwards into the room? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Does your door open outwards or inwards into the room? 
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. Does your door open outwards or inwards into the room? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>You are not allowed to trim a fire door. You need to choose a vinyl tile thickness to accomodate your fire door.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. What colour tone are you considering for your vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Does it suit your style? Lighter colours looks great at the beginning but they are more prone to stain after some time.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. Would your floor area have frequent traffic?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The more the traffic, the easier it is to stain. The tile gaps will then darken which is hard to clean.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. How often do you mop the floor?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Mopping will make gap lines darker and ruin a perfect white floor with gap lines.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

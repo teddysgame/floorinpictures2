@@ -1,0 +1,59 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Vinyl Tile Collection{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .h2padding {
+    padding: 50px;
+  }
+  .imgtile {
+    width: 100px;
+    padding: 5px;
+  }
+  .bold {
+    font-weight:bold;
+  }
+  .imghover:hover {
+      transform: scale(1.5, 1.5);
+      -ms-transform: scale(1.5, 1.5)); /* IE 9 */
+      -webkit-transform: scale(1.5, 1.5);
+  }
+  body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  margin-bottom: 60px;
+}
+
+</style>
+
+<h2 align="center" class="bold">Vinyl tile series</h2>
+
+<p>Total series: 10 types</p>
+
+<h3>Light Adolesense</h3>
+<a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}"></a><a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}"></a><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}"></a><a href="{{ url_for('tc.oxidizedwood') }}" title="Oxidized Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/oxidizedwood.jpg') }}"></a><a href="{{ url_for('tc.paleoak') }}" title="Pale Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/paleoak.jpg') }}"></a>
+<h3>Elder Brilliance</h3>
+<a href="{{ url_for('tc.balsawood') }}" title='Balsa Wood'><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/balsawood.jpg') }}"></a><a href="{{ url_for('tc.easternhemlock') }}" title="Eastern Hemlock"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/easternhemlock.jpg') }}"></a><a href="{{ url_for('tc.spruceomorika') }}" title="Spruce Omorika"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/spruceomorika.jpg') }}"></a><a href="{{ url_for('tc.tulepowood') }}" title="Tulepo Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/tulepowood.jpg') }}"></a><a href="{{ url_for('tc.oakfalcata') }}" title="Oak Falcata"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/oakfalcata.jpg') }}"></a>
+<h3>Solid Wood</h3>
+<a href="{{ url_for('tc.blackwood') }}" title="Black Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/blackwood.jpg') }}"></a><a href="{{ url_for('tc.boxelderwood') }}" title="Boxelder Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/boxelderwood.jpg') }}"></a><a href="{{ url_for('tc.fanooak') }}" title="Fano Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/fanooak.jpg') }}"></a><a href="{{ url_for('tc.hazelplum') }}" title="Hazel Plum"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/hazelplum.jpg') }}"></a><a href="{{ url_for('tc.oakespana') }}" title="Oak Espana"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/oakespana.jpg') }}"></a><a href="{{ url_for('tc.plumdosato') }}" title='Plum Dosato'><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/plumdosato.jpg') }}"></a><a href="{{ url_for('tc.sessileoak') }}" title="Sessile Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/sessileoak.jpg') }}"></a><a href="{{ url_for('tc.thaiteak') }}" title="Thai Teak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/thaiteak.jpg') }}"></a>
+<h3>Gentlemen's Leather</h3>
+<a href="{{ url_for('tc.ambrosiacedar') }}" title="Ambrosia Cedar"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/4/ambrosiacedar.jpg') }}"></a><a href="{{ url_for('tc.catalpawood') }}" title="Catalpa Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/4/catalpawood.jpg') }}"></a><a href="{{ url_for('tc.cherrywood') }}" title="Cherry Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/4/cherrywood.jpg') }}"></a><a href="{{ url_for('tc.movinguiwood') }}" title="Movingui Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/4/movinguiwood.jpg') }}"></a>
+<h3>Cherry Passion</h3>
+<a href="{{ url_for('tc.canarywood') }}" title="Canary Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/canarywood.jpg') }}"><a href="{{ url_for('tc.cherryprunus') }}" title="Cherry Prunus"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/cherryprunus.jpg') }}"></a><a href="{{ url_for('tc.jabilloglory') }}" title="Jabillo Glory"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/jabilloglory.jpg') }}"></a><a href="{{ url_for('tc.oakcorilona') }}" title="Oak Corilona"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/oakcorilona.jpg') }}"></a><!-- <a href=""><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/paviacherry.jpg') }}"></a><a href=""><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/5/teakmadura.jpg') }}"></a> -->
+
+<h3>Red Inspire</h3>
+<a href="{{ url_for('tc.amaziquewood') }}" title="Amazique Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/7/amaziquewood.jpg') }}"></a><a href="{{ url_for('tc.baliteak') }}" title="Bali Teak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/7/baliteak.jpg') }}"></a><a href="{{ url_for('tc.macacaubawood') }}" title="Macacauba Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/7/macacaubawood.jpg') }}"></a><a href="{{ url_for('tc.romaniaalder') }}" title="Romania Alder"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/7/romaniaalder.jpg') }}"></a>
+<h3>Supreme Wood</h3>
+<a href="{{ url_for('tc.berliniawood') }}" title="Berlinia Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/8/berliniawood.jpg') }}"></a><a href="{{ url_for('tc.walnutmimosa') }}" title="Walnut Mimosa"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/8/walnutmimosa.jpg') }}"></a><a href="{{ url_for('tc.rhodesianteak') }}" title="Rhodesian Teak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/8/rhodesianteak.jpg') }}"></a>
+<h3>Earth Valley</h3>
+<a href="{{ url_for('tc.amarellowood') }}" title="Amarello Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/6/amarellowood.jpg') }}"></a><a href="{{ url_for('tc.laureloak') }}" title="Laurel Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/6/laureloak.jpg') }}"></a><a href="{{ url_for('tc.mountainash') }}" title="Mountain Ash"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/6/mountainash.jpg') }}"></a><a href="{{ url_for('tc.scafitiwalnut') }}" title="Scafiti Walnut"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/6/scafitiwalnut.jpg') }}"></a><a href="{{ url_for('tc.southernmagnolia') }}" title="Southern Magnolia"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/6/southernmagnolia.jpg') }}"></a>
+<h3>Timeless Wisdom</h3>
+<a href="{{ url_for('tc.albiziawood') }}" title="Albizia Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/9/albiziawood.jpg') }}"></a><a href="{{ url_for('tc.anziochestnut') }}" title="Anzio Chestnut"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/9/anziochestnut.jpg') }}"></a><a href="{{ url_for('tc.blackpalm') }}" title="Black Palm"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/9/blackpalm.jpg') }}"></a><a href="{{ url_for('tc.chestnutafrica') }}" title="Chestnut Africa"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/9/chestnutafrica.jpg') }}"></a>
+<h3>Dark Chocolate</h3>
+<a href="{{ url_for('tc.chadblackwood') }}" title="Chad BlackWood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/10/chadblackwood.jpg') }}"></a><a href="{{ url_for('tc.hormigowood') }}" title="Hormigo Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/10/hormigowood.jpg') }}"></a>
+
+{% endblock %}

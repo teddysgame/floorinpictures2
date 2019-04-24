@@ -1,0 +1,1003 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">General</h2>
+
+<img src="{{ url_for('static', filename='images/assets/others/FAQs.png') }}" align="right" style="width:10%">
+<h3>How to use our FAQ for a better experience</h3>
+<p>Identify the type of your question, then use the search function (Ctrl+F) in your browser to find the question with its answer. We have over hundreds of questions covering a dozen category answered by interior designers and experienced installers. We are confident your questions have been answered somewhere in this FAQ.</p><br>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+<h3>Top 10 general questions and answers you must know </button><span class="badge">HOT</h3>
+<div class="accordion scrollable" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. What are the pros and cons of using vinyl flooring?
+        
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Pros
+          <ul>
+            <li>Moisture resistant</li>
+            <li>Tough and resistant to wear and tear</li>
+            <li>Can be used on all floors, walls and even ceiling</li>
+            <li>Can DIY</li>
+            <li>Cheap to install</li>
+            <li>Low maintenance and easy to clean</li>
+            <li>Hundreds of patterns to choose from</li>
+          </ul>
+          <br>
+          Cons
+          <ul>
+            <li>Difficult to remove if glued down</li>
+            <li>Can be punctured with sharp objects</li>
+            <li>Hard to recycle</li>
+            <li>Discolouring when exposed with excessive UV ray</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          2. How different does it feel between vinyl flooring, parquet and tiles?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Vinyl flooring tiles are hardly distinguishable from other types of floorings in terms of its colour, surface, texture and even hardness. It mimics its other tiling alternatives closely in various aspects and may perform much better due to its advantage in its properties.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          3. How does it feel like to step on vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It feels like stepping on concrete or tiles. Some thicker vinyl tiles would feel like stepping on a solid mat or parquet. Generally it doesn’t feel much of a difference compared to solid timber, parquet or tiles. We have also receive feedback that it feels a lot comfortable due to the following reasons.
+          <ul>
+            <li>The smooth surface between interlocking vinyls eliminates gaps that you may experience in tiles, giving you a wholesome experience with every step.</li>
+            <li>Tiles are generally colder. In an air conditioned environment, it may be unpleasant to some people especially the elderly to step on tiles barefooted. Vinyl tiles do not release heat as titles so it is more comfortable to step on.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading19">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse19" aria-expanded="true" aria-controls="collapse19">
+          4. What is the difference between vinyl flooring versus laminate flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Laminated flooring normally refers to the flooring that is HDF board, clicked together to form wooden flooring lookalike. Vinyl is like the name said is flooring made of vinyl material. Normally in office but it is also used for housing where it looks like the laminated floor above and normally advertised as waterproof flooring.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          5. Is it easy to DIY for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Vinyl flooring is one of the favourite choice for DIY enthusiast when it comes to flooring systems. It is quick, easy to assemble and does not require heavy machinery upon installation. Thanks to its solid interlocking attributes, the outcome of the installation would also look professionally done. People are often confident to DIY after spending some time studying its processes. If you are interested to DIY yourself, we highly encourage you to do so and watch the following DIY Youtube videos below. Just order the vinyl tiles from us and we will deliver it straight to your site address within 3 working days. You may also purchase other accessories to help you with the installation yourself as well from the link here. It is the most satisfying experience you can ever receive from the outcome.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          6. What kind of flooring should I use? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It highly depends on the factors as listed below. Do take time to go through each factor and consider the best flooring for your floor. If you’re still unconvinced or you have additional questions not listed in our FAQ, you may contact our hotline during working hours at xxx-xxx xxxx.
+        <br>
+        What is your budget?
+          <ul>
+            <li>We built in a calculator for you to derive the estimated costing for your flooring at your fingertips. When selecting a type of tile, add 10% more to your budget and that will be the total budget required for your flooring installation.</li>
+            <li>Our installation labour is fixed at RM1.50 per sqft. It is also conveniently generated by us using our calculator.</li>
+          </ul>
+        <br>
+        How is the traffic of your floor?
+          <ul>
+            <li>If your floor generally has higher traffic such as in retail spaces, you may want to consider darker colours. It is reported that lighter colour vinyl tiles are much easily stained especially on the joints. Type of material will highly be dependent on your budget since the feeling does not vary much. Vinyl flooring is safe to be step on with shoes.
+          </li>
+        </ul>
+        <br>
+        Do you have an infant, baby, pets or children at home?
+        <ul>
+            <li>Some people are sensitive with the health risk from vinyl tiles that claim to be omitting dangerous amounts of VAC that may pose health problems especially towards children and infants in the long run. In our opinion, due to its properties it is unavoidable to have its fair amount of VAC releasing. However, the amount of VAC being release is not as harmful as others sources may exaggerate. It is known that the air on a street with cars is much harmful as compared to the emission of VAC from vinyl floorings. The other option is to keep your home properly ventilated. Keep your doors or windows open to ensure good air circulation in and out of the building. Air conditioned spaces with a cooler environment will reduce the emission as well however do allow air ventilation from time to time.
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <li>Some people are sensitive with the health risk from vinyl tiles that claim to be omitting dangerous amounts of VAC that may pose health problems especially towards children and infants in the long run. In our opinion, due to its properties it is unavoidable to have its fair amount of VAC releasing. However, the amount of VAC being release is not as harmful as others sources may exaggerate. It is known that the air on a street with cars is much harmful as compared to the emission of VAC from vinyl floorings. The other option is to keep your home properly ventilated. Keep your doors or windows open to ensure good air circulation in and out of the building. Air conditioned spaces with a cooler environment will reduce the emission as well however do allow air ventilation from time to time.
+            </li>
+            <li>Our vinyls are supplied from reputable suppliers in Malaysia. Our distribution products are ensured to be safe and allowed within regulations. However if your concern is still there, you may consider to get it done in tiles.
+            </li>
+            <li>Children or pets at home often may cause a mess by spill or defecation like accidental urination or food spill. We would encourage to not use timber or parquet for your flooring in this matter unless you are able to provide immediate attention to your nuisance as to clean up immediately. Failing to do so may cause rupture or popping of parquet tiles in the long run. Waterproof materials are best suited to be used in this situation. Both vinyl and laminated tiles are built with water proofing attributes. Children toys or animal claws have been reportedly able to pierce vinyl titles but is not common. Most of the vinyl tiles have sharp absorption built in. But it is still something for you to consider.
+            </li>
+        </ul>
+        <br>
+        Do you have elderly folks at home?
+        <ul>
+            <li>Most vinyl and laminated tiles have anti slip textures etch into its wood-like surface to avoid elderly of slipping and falling accidents.
+            </li>
+            <li>Tiles are generally colder and may be uncomfortable to the bare feet of some elderly.
+            </li>
+        </ul>
+        <br>
+        Are you planning to DIY?
+        <ul>
+            <li>Tiles, parquet and timber flooring are generally much harder to DIY. It also requires heavy machinery to accomplish and may take some skills and experience in tile laying.
+            </li>
+            <li>Laminated flooring also requires heavy machinery to cut through due to its solid thickness.
+            </li>
+            <li>Vinyl however can be cut and detach using only a blade. The thing to watch out for is to wear protective gloves during the shredding as it may accidentally injure your fingers if you’re careless. The only troublesome part for some DIYers is the gluing part. You may opt for the floating series and just lay underlayments to avoid gluing your vinyl floorings.
+            </li>
+        </ul>
+        <br>
+        Do you need to hack the existing floor?
+        <ul>
+            <li>Some flooring prior laying requires to be hacked if the surface is uneven or badly damaged.
+            </li>
+            <li>Hacking existing flooring may cost you depending on the type of materials. You may seek our costing FAQ below for more idea on the prices of floor hacking.
+            </li>
+            <li>Vinyl flooring and laminated flooring does not require you to hack the existing floor prior laying as long as you have an even floor. You may just lay the vinyl tiles above existing solid tiles or parquet. For tiles, do consider an underlayment to avoid the gapping of tiles to surface on your vinyl flooring.
+            </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+    <div class="card-header" id="heading17">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+          7. What are transitionings?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Different rooms may require different type of floorings. The act of switching from one floor to another is called transitioning. Commonly between 2 different types of floorings. There are generally few types of transitioning available in floorings.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading18">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse18" aria-expanded="true" aria-controls="collapse18">
+          8. What area of the house is suitable to use vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are virtually no restrictions to where you can install your vinyl tiles. People have been known to also install vinyl tiles on ceilings and walls. Vinyl floorings are commonly laid in bedrooms and living rooms. Other known areas are kitchens and toilets. It is not encourage to lay vinyl outdoors or outside balconies that is directly exposed under the sun.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading21">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+          9. Would you experience noises while stepping o vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse21" class="collapse" aria-labelledby="heading21" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It can be quite loud if you’re walking on it with shoes on. Bare foot is much quieter when walking above it. Underlayment cushion will reduce the sound even further.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading22">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse22" aria-expanded="true" aria-controls="collapse22">
+          10. Is the living room suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse22" class="collapse" aria-labelledby="heading22" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most people install vinyl flooring in their living room due to its esthetic nature. You can view more examples of vinyl being installed in the living room at our gallery.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<h3>Index</h3>
+
+  <!-- End of top 10 -->
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. What are the pros and cons of using vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Pros
+          <ul>
+            <li>Moisture resistant</li>
+            <li>Tough and resistant to wear and tear</li>
+            <li>Can be used on all floors, walls and even ceiling</li>
+            <li>Can DIY</li>
+            <li>Cheap to install</li>
+            <li>Low maintenance and easy to clean</li>
+            <li>Hundreds of patterns to choose from</li>
+          </ul>
+          <br>
+          Cons
+          <ul>
+            <li>Difficult to remove if glued down</li>
+            <li>Can be punctured with sharp objects</li>
+            <li>Hard to recycle</li>
+            <li>Discolouring when exposed with excessive UV ray</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Is vinyl flooring suitable for office use?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Yes. Vinyl flooring is commonly being used in offices due to its style, durability, low maintenance and long lasting performance.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. How different does it feel between vinyl flooring, parquet and tiles?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Vinyl flooring tiles are hardly distinguishable from other types of floorings in terms of its colour, surface, texture and even hardness. It mimics its other tiling alternatives closely in various aspects and may perform much better due to its advantage in its properties.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. What is the vinyl flooring installation progress?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We highly recommed you to watch the Youtube video below for more general knowledge on how vinyl flooring is being installed.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. How often people DIY??
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>In our experience, 3 out of 10 people that purchase from us does DIY. The Vinyl interlocking assembly system allows anyone to confidently do it themselves.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. Can I buy per piece or do I have to buy in bulk?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We do not sell in pieces but in box. A box commonly contains 10 strips depending on the brand you want. We are happy to deliver any number of boxes to you.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. Do we include delivery fees?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We waive the delivery fees if the order is more than 1000 sqft and only if your site address is located within Klang Valley. Other than that we are subjecting to 5 sens per sqft for delivery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. Can I self-collect from any supplier??
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Unfortunately we are an independent distributor and we do not have the option to self-collect at any similar supplier outlets. We are applying for the service for now but it may only be available in the future.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. Can I do cash on delivery (COD)?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Unfortunately, all our orders are done online and have to be cleared prior sending the products to your site address. We sincerely apologies for the inconvenience caused.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Is it easy to DIY for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Vinyl flooring is one of the favourite choice for DIY enthusiast when it comes to flooring systems. It is quick, easy to assemble and does not require heavy machinery upon installation. Thanks to its solid interlocking attributes, the outcome of the installation would also look professionally done. People are often confident to DIY after spending some time studying its processes. If you are interested to DIY yourself, we highly encourage you to do so and watch the following DIY Youtube videos below. Just order the vinyl tiles from us and we will deliver it straight to your site address within 3 working days. You may also purchase other accessories to help you with the installation yourself as well from the link here. It is the most satisfying experience you can ever receive from the outcome.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. What if I screw up during DIY?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Don’t worry, we always have experts waiting to receive your inquiries on DIY. Worst come to worst we will go to your site and take over the work for you. However a modest RM1.50 per sqft will be charge to you. We provide this service only as an assurance to encourage DIY enthusiast to bravely take on the DIY journey. Terms and conditions applied.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. How does it feel like to step on vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It feels like stepping on concrete or tiles. Some thicker vinyl tiles would feel like stepping on a solid mat or parquet. Generally it doesn’t feel much of a difference compared to solid timber, parquet or tiles. We have also receive feedback that it feels a lot comfortable due to the following reasons.
+          <ul>
+            <li>The smooth surface between interlocking vinyls eliminates gaps that you may experience in tiles, giving you a wholesome experience with every step.</li>
+            <li>Tiles are generally colder. In an air conditioned environment, it may be unpleasant to some people especially the elderly to step on tiles barefooted. Vinyl tiles do not release heat as titles so it is more comfortable to step on.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          13. What kind of flooring should I use? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It highly depends on the factors as listed below. Do take time to go through each factor and consider the best flooring for your floor. If you’re still unconvinced or you have additional questions not listed in our FAQ, you may contact our hotline during working hours at xxx-xxx xxxx.
+        <br>
+        What is your budget?
+          <ul>
+            <li>We built in a calculator for you to derive the estimated costing for your flooring at your fingertips. When selecting a type of tile, add 10% more to your budget and that will be the total budget required for your flooring installation.</li>
+            <li>Our installation labour is fixed at RM1.50 per sqft. It is also conveniently generated by us using our calculator.</li>
+          </ul>
+        <br>
+        How is the traffic of your floor?
+          <ul>
+            <li>If your floor generally has higher traffic such as in retail spaces, you may want to consider darker colours. It is reported that lighter colour vinyl tiles are much easily stained especially on the joints. Type of material will highly be dependent on your budget since the feeling does not vary much. Vinyl flooring is safe to be step on with shoes.
+          </li>
+        </ul>
+        <br>
+        Do you have an infant, baby, pets or children at home?
+        <ul>
+            <li>Some people are sensitive with the health risk from vinyl tiles that claim to be omitting dangerous amounts of VAC that may pose health problems especially towards children and infants in the long run. In our opinion, due to its properties it is unavoidable to have its fair amount of VAC releasing. However, the amount of VAC being release is not as harmful as others sources may exaggerate. It is known that the air on a street with cars is much harmful as compared to the emission of VAC from vinyl floorings. The other option is to keep your home properly ventilated. Keep your doors or windows open to ensure good air circulation in and out of the building. Air conditioned spaces with a cooler environment will reduce the emission as well however do allow air ventilation from time to time.
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <li>Some people are sensitive with the health risk from vinyl tiles that claim to be omitting dangerous amounts of VAC that may pose health problems especially towards children and infants in the long run. In our opinion, due to its properties it is unavoidable to have its fair amount of VAC releasing. However, the amount of VAC being release is not as harmful as others sources may exaggerate. It is known that the air on a street with cars is much harmful as compared to the emission of VAC from vinyl floorings. The other option is to keep your home properly ventilated. Keep your doors or windows open to ensure good air circulation in and out of the building. Air conditioned spaces with a cooler environment will reduce the emission as well however do allow air ventilation from time to time.
+            </li>
+            <li>Our vinyls are supplied from reputable suppliers in Malaysia. Our distribution products are ensured to be safe and allowed within regulations. However if your concern is still there, you may consider to get it done in tiles.
+            </li>
+            <li>Children or pets at home often may cause a mess by spill or defecation like accidental urination or food spill. We would encourage to not use timber or parquet for your flooring in this matter unless you are able to provide immediate attention to your nuisance as to clean up immediately. Failing to do so may cause rupture or popping of parquet tiles in the long run. Waterproof materials are best suited to be used in this situation. Both vinyl and laminated tiles are built with water proofing attributes. Children toys or animal claws have been reportedly able to pierce vinyl titles but is not common. Most of the vinyl tiles have sharp absorption built in. But it is still something for you to consider.
+            </li>
+        </ul>
+        <br>
+        Do you have elderly folks at home?
+        <ul>
+            <li>Most vinyl and laminated tiles have anti slip textures etch into its wood-like surface to avoid elderly of slipping and falling accidents.
+            </li>
+            <li>Tiles are generally colder and may be uncomfortable to the bare feet of some elderly.
+            </li>
+        </ul>
+        <br>
+        Are you planning to DIY?
+        <ul>
+            <li>Tiles, parquet and timber flooring are generally much harder to DIY. It also requires heavy machinery to accomplish and may take some skills and experience in tile laying.
+            </li>
+            <li>Laminated flooring also requires heavy machinery to cut through due to its solid thickness.
+            </li>
+            <li>Vinyl however can be cut and detach using only a blade. The thing to watch out for is to wear protective gloves during the shredding as it may accidentally injure your fingers if you’re careless. The only troublesome part for some DIYers is the gluing part. You may opt for the floating series and just lay underlayments to avoid gluing your vinyl floorings.
+            </li>
+        </ul>
+        <br>
+        Do you need to hack the existing floor?
+        <ul>
+            <li>Some flooring prior laying requires to be hacked if the surface is uneven or badly damaged.
+            </li>
+            <li>Hacking existing flooring may cost you depending on the type of materials. You may seek our costing FAQ below for more idea on the prices of floor hacking.
+            </li>
+            <li>Vinyl flooring and laminated flooring does not require you to hack the existing floor prior laying as long as you have an even floor. You may just lay the vinyl tiles above existing solid tiles or parquet. For tiles, do consider an underlayment to avoid the gapping of tiles to surface on your vinyl flooring.
+            </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading14">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+          14. Is it worth to DIY for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Absolutely. You will have a sense of accomplishment after DIY. You will also feel more belonged because of the effort you put in. Do take note; a 1200 sqft installation may take up to 2 to 3 days depending on the help you receive.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading15">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+          15. Would it be appropriate to lay the entire house with vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Customers have been known to lay vinyl floorings even in their toilets and kitchens taking advantage of its waterproofing attributes. It also highly depends on what you want. Do consider to not lay vinyl flooring outdoors or directly exposed under the sun. Discolouring will happen after long exposure as the patterns are colour printed on the vinyl tiles.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading16">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+          16. Can we install a mix of vinyl flooring with other types of flooring such as tiles or laminated flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We have seen a mix of vinyl, laminated and tiles in a single floor. Just be vary of the transitioning between floor types.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading17">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+          17. What are transitionings?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Different rooms may require different type of floorings. The act of switching from one floor to another is called transitioning. Commonly between 2 different types of floorings. There are generally few types of transitioning available in floorings.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading18">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse18" aria-expanded="true" aria-controls="collapse18">
+          18. What area of the house is suitable to use vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are virtually no restrictions to where you can install your vinyl tiles. People have been known to also install vinyl tiles on ceilings and walls. Vinyl floorings are commonly laid in bedrooms and living rooms. Other known areas are kitchens and toilets. It is not encourage to lay vinyl outdoors or outside balconies that is directly exposed under the sun.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading19">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse19" aria-expanded="true" aria-controls="collapse19">
+          19. What is the difference between vinyl flooring versus laminate flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Laminated flooring normally refers to the flooring that is HDF board, clicked together to form wooden flooring lookalike. Vinyl is like the name said is flooring made of vinyl material. Normally in office but it is also used for housing where it looks like the laminated floor above and normally advertised as waterproof flooring.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="20">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse20" aria-expanded="true" aria-controls="collapse20">
+          20. How is the sound insulation for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most of our vinyl flooring is backed with soft foam that cushions any impact. It acts as a sound reduction and is even more silent as compared to timber or parquet floorings.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading21">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+          21. Would you experience noises while stepping o vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse21" class="collapse" aria-labelledby="heading21" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It can be quite loud if you’re walking on it with shoes on. Bare foot is much quieter when walking above it. Underlayment cushion will reduce the sound even further.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading22">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse22" aria-expanded="true" aria-controls="collapse22">
+          22. Is the living room suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse22" class="collapse" aria-labelledby="heading22" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most people install vinyl flooring in their living room due to its esthetic nature. You can view more examples of vinyl being installed in the living room at our gallery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading23">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse23" aria-expanded="true" aria-controls="collapse23">
+          23. Is the kitchen suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse23" class="collapse" aria-labelledby="heading23" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>People install vinyl flooring in their dry and wet kitchen not only for esthetic purposes but also for their waterproofing and anti-slip attributes. These areas in the house are prone to spills and would do terrible damage to wooden surface. Most people uses tiles for it, however using vinyl is a modern trend.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading24">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse24" aria-expanded="true" aria-controls="collapse24">
+          24. Is the toilet suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse24" class="collapse" aria-labelledby="heading24" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Some people install vinyl flooring in their toilets and bathrooms only for esthetic purposes but also for their waterproofing and anti-slip attributes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading25">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse25" aria-expanded="true" aria-controls="collapse25">
+          25. Is the bedroom suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse25" class="collapse" aria-labelledby="heading25" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Wood has psychological effects on people and a similar stress-reducing effect to nature. Wooden aesthetics helps relax and comforts a person while promotes the well-being of mind and body. Therefore it is a popular choice to place wooden vinyl floorings in bedrooms or bed platforms and even on walls.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading26">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse26" aria-expanded="true" aria-controls="collapse26">
+          26. Is the corridor suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse26" class="collapse" aria-labelledby="heading26" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Discolouring often happens over time if vinyl is exposed to direct sunlight. It is not recommended to have vinyl tiles placed on your corridor.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading27">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse27" aria-expanded="true" aria-controls="collapse27">
+          27. Is the storeroom suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse27" class="collapse" aria-labelledby="heading27" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Here are the things to consider about installing vinyl tiles in a storeroom.
+        </p>
+        <ul>
+          <li>
+            Storerooms are generally quite small. Therefore it wouldn’t cost much to just filled it with vinyl floorings rather than leaving it as it is.
+          </li>
+          <li>
+            You may be storing heavy equipment in the storeroom that may damage the floor when mobilizing.
+          </li>
+          <li>
+            Quite rarely someone will actually look inside a storeroom. Therefore it plays no aesthetic values to your interior looks.
+          </li>
+          <li>
+            Storeroom may be quite dusty therefore having vinyl flooring can be easy to clean up.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading28">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+          28. Is the bedroom platform suitable for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse28" class="collapse" aria-labelledby="heading28" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Often wooden surface looks are highly recommended for bed platforms due to its psychological benefits.  Wood has psychological effects on people and a similar stress-reducing effect to nature. The colour of the wood can be of any colour as long as it resembles any kind of wooden texture.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading29">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse29" aria-expanded="true" aria-controls="collapse29">
+          29. What colour should I use for my skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse29" class="collapse" aria-labelledby="heading29" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The common rule of thumb when it comes to skirting is, it has to match the colours perfectly or contrast it very boldly. There are 3 types of skirting colour scheme that interior designers used for their design.
+          <ul>
+            <li>
+              Commonly people will match the skirting colour with their flooring colours. Giving it a much natural look.
+            </li>
+            <li>
+              Others will just go with a plain white to contrast the flooring, skirting and the wall colours.
+            </li>
+            <li>
+              Using bright skirting colours to spice up the enviroment. Normally for the bolder more energetic requirement.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading30">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse30" aria-expanded="true" aria-controls="collapse30">
+          30. What flooring pattern should I use?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse30" class="collapse" aria-labelledby="heading30" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>This is entirely up to the taste and decision of the home owner. However, certain pattern installations are deemed to be more expensive than the other. So if you have a thicker budget, do seek for a quotation and decide.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading31">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse31" aria-expanded="true" aria-controls="collapse31">
+          31. What kind of pattern flooring types are there?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse31" class="collapse" aria-labelledby="heading31" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are generally 9 types of common flooring patterns that is able to be laid using vinyl tiles.
+          <br>
+          <br>
+          <br>
+          Grid
+          <ul>
+            <li>
+              It is also referred as stack bonds where tiles are stacked vertically and horizontally aligned with each other.
+            </li>
+          </ul>
+          Offset
+          <ul>
+            <li>
+              Commonly referred as running bonds. This layout is laid half of the width of each tiles connecting each other.
+            </li>
+          </ul>
+          Stagger
+          <ul>
+            <li>
+              It is an alternative arrangement of tiles in a wavy line. Mostly done in 2 to 3 colours.
+            </li>
+          </ul>
+          Diagonal
+          <ul>
+            <li>
+              A pattern laid 45 degrees instead of a horizontal straight line.
+            </li>
+          </ul>
+          Herringbone
+          <ul>
+            <li>
+              The pattern is named Herringbone after a fish call Herring fish due to its skeleton structure. It is seen as a zigzag pattern. Some would also call it as broken twill weave.
+            </li>
+          </ul>
+          Weave
+          <ul>
+            <li>
+              Also referred to as basketweave, this variation combination with different colours will produce different patterns.
+            </li>
+          </ul>
+          Corridor
+          <ul>
+            <li>
+              It is a grid pattern layout with rows intervening throughout.
+            </li>
+          </ul>
+          Solder
+          <ul>
+            <li>
+              It is a stack of rectangular tiles with an alternate direction variation.
+            </li>
+          </ul>
+          Random
+          <ul>
+            <li>
+              It is an arrangement of rectangular tiles in no particular order.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

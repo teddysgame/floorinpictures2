@@ -1,0 +1,336 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Durability</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Will vinyl get sticky over time? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Vinyl floorings like all floorings gets dirty over time due to activities. Do maintain it often and you will be fine.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Would there be pop ups, air traps or air bubbles under vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, it is not common but a known issue if your moisture insulation is not done properly. Common places to have air traps and air bubbles are areas of high moisture concentration such as the ground floor up, toilet and wet kitchen areas. Do insist on proper insulation as it will save you a lot of headache in the long run.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Would vinyl flooring hold up to discolouring? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Vinyl floorings are tough materials however its colours are printed on using traditional means that may not be resistant to UV rays. A floor area that is frequently expose to sunlight may seen gradual discolouration after a long period of time. Just do not expose your floorings directly under the sun and you will be fine. If you absolutely want to prevent it, use a floor mat to cover up and floor areas that is exposed to sunlight from your balcony or windows.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Would vinyl flooring discolour easily?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>If directly under the sun, discolouring will occur as close to 6 months.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. Would vinyl flooring shrink over time?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes especially in countries with 4 seasons. Shrinking in air conditioned environments also face similar shrinkage but not as serious. The shrinkage is not noticeable by the naked eye. With a stable weather, it is fine and not prone to gapping. The shrinkage is not permanent and only temporary.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. How durable is vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Vinyl flooring is known for its superior durability as compared to tiles and other wooden flooring alternatives. It is built in its material properties to withstand the toughest conditions such as water and even impact. Vinyl flooring will definitely stand the test of time.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. Would vinyl flooring’s glossiness fade over time? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it will. It takes 3 to 5 years to be slightly noticeable about the fading glossiness. Vinyl will also fade unevenly due to areas more or less exposed to the sun. Inferior vinyl tiles would fade even faster. It is known that some luxury brands will fade a lot lesser. A soft curtain will help reduce the fading without compromising on the home sunlight.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. Is vinyl flooring’s interlocking durable? Will the locking vinyl flooring work
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, there are no known failed cases of interlocking among tiles. However gapping is a known problem to happen to vinyl tiling.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. Is vinyl flooring able to withstand heavy mopping and vacuum?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes. Vinyl flooring can withstand daily vacuum and mopping. Do use proper cleaners and soft mops will do. However do not use steam mops as high temperature will cause bubbling of the titles.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Will vinyl flooring’s surface wear-off over time?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The pattern on the surface will not wear off over time because it is quite durable and resilient. Discolouring however will happen over time depending on the exposure of sunlight.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. How would air conditioning affect the condition of vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Full time air conditioning would stabilize the flooring from shrinkage and expanding. Occasion air conditioning would not affect much as well if temperature contrast are within 10 degrees Celsius.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. Is vinyl flooring able to withstand humid environment? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Vinyl floorings are able to within humid environment without problems due to its waterproofing attributes. The one to watch out is its air bubble build up if the humidity is concentrated and not air ventilated. Toilets generally have adequate air flows as a building regulation.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          13. Is it okay to walk above vinyl flooring with shoes?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes you are able to walk above vinyl flooring with shoes as it is not deep impact or have piercing scratch.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading14">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+          14. Is it easy to pierce through vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Only with sharp objects it is easily able to pierce through. Blunt objects are generally harder.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading15">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+          15. Is it easy to scratch vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It depends on how the scratch is being made. Common footprints from shoes are fine however they may be scratched from large moving furnitures.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading16">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+          16. Is it easy to damage vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>As long as the impact is not heavy enough, it is generally able to withstand any sort of direct impact.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

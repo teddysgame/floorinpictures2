@@ -1,0 +1,294 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Brand</h2>
+
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. What are the recommended brands available in the market? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We only carry the brands that are reputable and we trust. We do not carry Inferior brands that are imported from unknown sources.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. What is the most expensive vinyl flooring brand?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        It depends on the thickness of the tiles and surface.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. What is the budget vinyl flooring brand
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        It depends on the thickness of the tiles and surface.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Why buy from us and not directly from the supplier? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, you may get your products directly from our brand suppliers. However not only our prices are competitive without direct suppliers, we offer a range of services and protection from installers that may be attractive to you. We protect you from claims of installers using an inferior brand. We are an online e-commerce store that distributes our products independently from suppliers. There is almost no difference from buying with us and from our direct supplier.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. What is WPC vinyl tile?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The biggest difference between WPC vinyl tiles and luxury vinyl tiles are the thickness and the way it is being manufactured. WPC stands for Wood Plastic Composite. Both of these tiles are made from vinyl materials. WPC tiles however are much thicker and is coated with a water proofing layer. WPC are generally more expensive per sqft.
+        <br>
+        WPC however are not commonly used as a preferred tile installation because cost wise and benefits are not compelling.
+        <br>
+        We do not carry WPC tiles at the moment. We may carry some of it in the future if there are enough demand.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. Where are most of our tiles manufactured?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most of our tiles are of European technology manufactured in China.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. Do we include delivery fees?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We waive the delivery fees if the order is more than 1000 sqft and only if your site address is located within Klang Valley. Other than that we are subjecting to 5 sens per sqft for delivery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. What are the advantages and disadvantages between brands?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The technology behind each brand that manufactures the tiles are generally the same. The only difference is the material composition ratio and pattern details above the tiles. That is the deciding factor of how expensive a tile will be.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. What type of brands do you carry?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Where are good vinyl flooring suppliers in Kuala Lumpur? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>You may just walk-in to any brand supplier express stores to purchase your tiles. However you may have a booking beforehand with the express retail before collecting them. They may not have a certain stock in hand. Depending on your sqft, your stock may be quite heavy and large in bulk so do consider retrieving it with a larger vehicle. Protect your car with protective layers like newspapers as they may slush in the car and scratch the interior of your car as well. A single box may weight up to 3kg per box.
+        <br>
+        We are also offering you a hassle free solution which is just to order it directly from us and we will arrange the delivery to your site within 3 working days. We are offering free delivery above 1000 sqft within Klang Valley. For more info, do send us an inquiry here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. Where can I get good contractors to install the vinyl flooring for me?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We have no affiliates or credible sources of installers you may contact.
+          <br>
+          However we do have our self-trained internal team of local installers that will install the floors for you at RM1.80 per sqft at a standard market rate.
+          <br>
+          Our company will also deliver to you an e-report about the installation works to ensure that all proper steps (including cleaning, planning and installation progress at 10-50-100%) and issues are highlighted to you by the end of the day.
+          <br>
+          Do check out our installer’s profiles and services <a href="#">here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. Am I able to be an affiliate or part of the installer team?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, we welcome any potential partners but you have to adhere to our strict criterias as listed below. All our installers are abide to the following criteria.
+          <ul>
+            <li>You have to be a local person and not a foreginer.</li>
+            <li>You have to have deep knowledge about vinyl floorings and installations.</li>
+            <li>You have to adhere to our reporting standard operation procedures.</li>
+            <li>You are willing to take 80% installation fees and 20% retention fees for 30 days.</li>
+            <li>Must have a sense of artistic intuition.</li>
+            <li>Willing to participate in our strict training program for 7 days.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+{% endblock %}

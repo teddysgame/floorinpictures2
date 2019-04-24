@@ -1,0 +1,660 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Maintenance</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. What are the common problems that will arise on vinyl floorings?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          <ul>
+            <li>
+              A common problem would be gappings.
+            </li>
+            <li>
+              Other known problems are also air traps or air bubbles.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. What are gappings?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Gappings are long trenches arising from vinyl flooring tiles especially from the end to end side.
+        <img src="">
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Gappings are long trenches arising from vinyl flooring tiles especially from the end to end side.
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Gapping is a common problem that happens in vinyl floorings. The tiles tend to slide during contracting and expanding leaving a trench as shown. It is also a sign that the tiles were not tightly locked during the installation process. Glued down vinyl floorings may also have this problem if tiles are not glued properly or ‘slide’ during installation while weakening the glue.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. Is it easy to fix gappings?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes, gappings can be easily fixed.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. How to fix gappings?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It can be fixed using masking or double sided tapes, a block of wood and a rubber hammer. Follow the Youtube video below. And it will be fixed in no time.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. How to prevent gapping?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          <ul>
+            <li>
+              Most importantly is to allow your vinyl tiles to <a href="#">acclimate</a> at least 48 hours prior installation.
+            </li>
+            <li>
+              Use a thicker vinyl tile. Prefarably 3mm thick.
+            </li>
+            <li>
+              If possible, reduce the traffic.
+            </li>
+            <li>
+              Glue the gapping during fixing.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. Will gapping cause any problems in the future?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It is not known to damage the vinyl tiles. Water may seep into the flooring to cause bubbling or fungus so it is crucial to clean up a spill when in contact with water immediately.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. Is it easy to repair a damaged vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It is not difficult to replace a damage vinyl title but it is extremely time consuming. Do check out a Youtube video below or consult one of our specialist and we can advise you accordingly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. How to repair/replace damaged vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>For self repair, do check out the Youtube video below.
+          <br>
+          We also offer repair works and we charge by RM8 per sqft plus a fixed mobilization fees of RM50.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Do I need to redo a huge part of the vinyl flooring if there are damages to my vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>No, it is easy to redo only a part of the vinyl flooring and you do not need to change the whole part. Do however to be reminded to reuse the same colour and design pattern for your vinyl flooring.
+          <br>
+          If you have a history from purchasing from us, we will have your records stored permanently and will retrieve the info you at any time.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. Is it okay to glue my vinyl flooring above parquet? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is able to glue above parquet. Do however be advice that it may damage the parquet if being hack in the future.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. Is it okay to glue my vinyl flooring above tiles?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is common to glue above tiles. Do however be advice that it may damage the tiles if being hack in the future.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          13. Is it okay to glue my vinyl flooring above concrete? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is common to glue above concrete. Do however be advice that it may damage the concrete surface if being remove in the future.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading14">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+          14. What kind of detergent to use to clean vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>We have a series of recommedations for you in our store that is natural and not harsh towards your vinyl flooring. Do check them out here.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading15">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+          15. How to care and protect for your vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Do
+          <ul>
+            <li>
+              Wipe spills immediately and refrain from exposing to too much water.
+            </li>
+            <li>
+              Vacuum or sweep as often as possible. Sandy floors may scratch and wear the tiles over time.
+            </li>
+            <li>
+              Use floor protector for your furniture to prevent puncture or scratch damage.
+            </li>
+            <li>
+              Mop your floor with a suitable floor cleaner. You may check out our recommended cleaners on our site here.
+            </li>
+          </ul>
+          <br>
+          Don't
+          <ul>
+            <li>
+              Never use a detergent that is abrasive.
+            </li>
+            <li>
+              Do not use vinegar or shin products as it may leave a film instead.
+            </li>
+            <li>
+              Never use wax polish
+            </li>
+            <li>
+              Never use scrubbing tools like stainless steel brush.
+            </li>
+            <li>
+              Don’t use rolling casters at home such as computer chairs. Use a mat beneath it.
+            </li>
+            <li>
+              Never use steam mops for cleaning as it will cause bubbling.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading16">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+          16. What can I apply on top of my vinyl flooring to protect it? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>You do not need to apply anything above the vinyl flooring to protect the surface. Most vinyl tiles are tough and will retain its shine for a long time. Applying anything on top may do more harm than good. Just follow a frequent maintenance will do.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading17">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+          17. Is vinyl flooring easy to maintain?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There is no need for complicated maintenance. A simple sweep and mop with appropriate cleaning products is all you need to keep your vinyl flooring clean.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading18">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse18" aria-expanded="true" aria-controls="collapse18">
+          18. How often do you need to clean your vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>How often do you need to clean your vinyl flooring?
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading19">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse19" aria-expanded="true" aria-controls="collapse19">
+          19. Can I clean and mop vinyl flooring everyday? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Absolutely. Just be wary to clean them using proper means to prevent scratches on the flooring.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="20">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse20" aria-expanded="true" aria-controls="collapse20">
+          20. Should I reuse an existing skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          <ul>
+            <li>
+              Do not reuse if you plan to repaint a MDF skirting.
+            </li>
+            <li>
+              Is your skirting already damage by moisture?
+            </li>
+            <li>
+              Is the colour scheme correct?
+            </li>
+            <li>
+              It is entirely up to you to decide.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading21">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+          21. Would you experience noises while stepping o vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse21" class="collapse" aria-labelledby="heading21" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It can be quite loud if you’re walking on it with shoes on. Bare foot is much quieter when walking above it. Underlayment cushion will reduce the sound even further.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading22">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse22" aria-expanded="true" aria-controls="collapse22">
+          22. Is the living room suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse22" class="collapse" aria-labelledby="heading22" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most people install vinyl flooring in their living room due to its esthetic nature. You can view more examples of vinyl being installed in the living room at our gallery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading23">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse23" aria-expanded="true" aria-controls="collapse23">
+          23. Is the kitchen suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse23" class="collapse" aria-labelledby="heading23" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>People install vinyl flooring in their dry and wet kitchen not only for esthetic purposes but also for their waterproofing and anti-slip attributes. These areas in the house are prone to spills and would do terrible damage to wooden surface. Most people uses tiles for it, however using vinyl is a modern trend.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading24">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse24" aria-expanded="true" aria-controls="collapse24">
+          24. Is the toilet suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse24" class="collapse" aria-labelledby="heading24" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Some people install vinyl flooring in their toilets and bathrooms only for esthetic purposes but also for their waterproofing and anti-slip attributes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading25">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse25" aria-expanded="true" aria-controls="collapse25">
+          25. Is the bedroom suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse25" class="collapse" aria-labelledby="heading25" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Wood has psychological effects on people and a similar stress-reducing effect to nature. Wooden aesthetics helps relax and comforts a person while promotes the well-being of mind and body. Therefore it is a popular choice to place wooden vinyl floorings in bedrooms or bed platforms and even on walls.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading26">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse26" aria-expanded="true" aria-controls="collapse26">
+          26. Is the corridor suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse26" class="collapse" aria-labelledby="heading26" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Discolouring often happens over time if vinyl is exposed to direct sunlight. It is not recommended to have vinyl tiles placed on your corridor.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading27">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse27" aria-expanded="true" aria-controls="collapse27">
+          27. Is the storeroom suitable for vinyl flooring? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse27" class="collapse" aria-labelledby="heading27" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Here are the things to consider about installing vinyl tiles in a storeroom.
+        </p>
+        <ul>
+          <li>
+            Storerooms are generally quite small. Therefore it wouldn’t cost much to just filled it with vinyl floorings rather than leaving it as it is.
+          </li>
+          <li>
+            You may be storing heavy equipment in the storeroom that may damage the floor when mobilizing.
+          </li>
+          <li>
+            Quite rarely someone will actually look inside a storeroom. Therefore it plays no aesthetic values to your interior looks.
+          </li>
+          <li>
+            Storeroom may be quite dusty therefore having vinyl flooring can be easy to clean up.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading28">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+          28. Is the bedroom platform suitable for vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse28" class="collapse" aria-labelledby="heading28" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Often wooden surface looks are highly recommended for bed platforms due to its psychological benefits.  Wood has psychological effects on people and a similar stress-reducing effect to nature. The colour of the wood can be of any colour as long as it resembles any kind of wooden texture.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading29">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse29" aria-expanded="true" aria-controls="collapse29">
+          29. What colour should I use for my skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse29" class="collapse" aria-labelledby="heading29" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The common rule of thumb when it comes to skirting is, it has to match the colours perfectly or contrast it very boldly. There are 3 types of skirting colour scheme that interior designers used for their design.
+          <ul>
+            <li>
+              Commonly people will match the skirting colour with their flooring colours. Giving it a much natural look.
+            </li>
+            <li>
+              Others will just go with a plain white to contrast the flooring, skirting and the wall colours.
+            </li>
+            <li>
+              Using bright skirting colours to spice up the enviroment. Normally for the bolder more energetic requirement.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

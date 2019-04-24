@@ -1,0 +1,252 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Walnut Mimosa{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+
+<!-- For image gallery -->
+<style>
+  .h2padding{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    }
+
+  .bold {
+    font-weight:bold;
+    }
+
+  .expertimg {
+    border-radius: 50%;
+    }
+
+  .pjustify {
+    text-align: justify;
+    }
+  .ppadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+  .h3padding {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .imgpadding {
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #more {display: none;}
+</style>
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+  }
+
+function readmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='images/img/8/walnutmimosa.jpg') }}" style="width: 70%" class="imgpadding">
+      <hr>
+      <div class="row">
+      <!-- First spec -->
+      <h4>Texture Surface</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Smooth</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 60%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Rough</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Second Spec -->
+      <div class="row">
+      <h4>Ingrained Pattern</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Mild</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 60%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Dense</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Third Spec -->
+      <div class="row">
+      <h4>Floor Density</h4>
+        <div class="col-sm-2">
+          <p style="text-align:left;"><font color="">
+          Soft</font>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 60%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <span style="float:right;"><font color="">Hard</font></span>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2 class="bold">Walnut Mimosa</h2>
+      <h4>EU4153</h4>
+      <h3>Thickness: 4mm</h3>
+      <p><font color="#DCDCDC">Note: The thicker the tile, the more expensive it will be.</font></p>
+      <h4><a href="{{ url_for('page.brands') }}">Floordepot</a> | <a href="{{ url_for('tc.tilecollection') }}">Supreme Wood</a></h4>
+      <hr>
+      <p><font color="#DCDCDC">Disclaimer: Price is based on the average past 3 months and does not reflect prices today.</font></p>
+      <h2><font color="">RM 14.50</font></h2>
+      <h4><font color="">/sq.ft</font></h4>
+      
+      <br>
+      <h4 class="h3padding">Specification</h4>
+      <p>Suitable area : All residential to moderate commercial <br>
+      Board size : 4.2 x 150 x 935mm <br>
+      Package content : 18.1sqft / 12 panels  <br>
+      Surface treatment : Wood Grain <br>
+      Edge treatment : Seamless</p>
+
+      <br>
+      <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}" style="width:350px" target="_blank">Get a quote for this tile</a>
+      
+    </div>
+
+    <!-- Third column -->
+    <div class="col-md-4" style="background-color:#f2f5f9">
+      <h2>Interior Advice</h2>
+      <div align="right"><img class="expertimg" src="{{ url_for('static', filename='images/assets/team/gh.png') }}" style="width: 35%">
+      <h5 class="bold"><font color="#DCDCDC">Expert Review: </font>Mr. Tee - Interior Consultant</h5>
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigemptystar.png') }}" style="width: 5%">  4/5
+      </div>
+      <p class="pjustify ppadding">Walnut Mimosa comes with a beautiful wood grain pattern to your floor which is rather comfortable to step on. This tile is suitable for spacious environments. If you want to contrast the colour of your tile and wall, this tile does the job. Use this tile as well if you have a heavier traffic in the area to mask stains and dirt resulting from the traffic. However scratches will be more apparent so do take precautionary steps in securing sharp objects such as furnitures to not puncture the flooring surface. This tile is suitable for living rooms, kitchens and also bathrooms.</p>
+      <br>
+      <h5>
+        Consider to use this colour tile if:
+      </h5>
+          <p>
+            <ul>
+              <li>You have spacious environment.</li>
+              <li>You have bright coloured walls and want to constrast the colour of your floor.</li>
+              <li>You have heavy traffic in your area.<span id="dots">...</span></li>
+              <span id="more"><li>You plan to use this in your living room.</li>
+              <li>You plan to use this in your living room.</li>
+              <li>You have dark coloured furnitures.</li>
+              <li>You plan to use this in your kitchen.</li>
+              <li>You plan to use this in your bathroom.</li>
+              <li>Also consider whether are you living in here for the long term. Lighter coloured tiles is a better preference to buyers.</li></span></p>
+            </ul>
+          </p>
+          <div align="right">
+            <a href="#" button onclick="readmore()" id="myBtn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container row">
+    <h3 class="bold">Other tiles from Supreme Wood</h3>
+    <a href="{{ url_for('tc.berliniawood') }}" title="Berlinia Wood"><img src="{{ url_for('static', filename='images/img/8/berliniawood.jpg') }}" style="width: 10%" class="imghover"></a>
+    <a href="{{ url_for('tc.rhodesianwood') }}" title="Rhodesian Wood"><img src="{{ url_for('static', filename='images/img/8/rhodesianwood.jpg') }}" style="width: 10%" class="imghover"></a>
+    <br>
+    <br>
+    <h3 class="bold">Backstory & Origins</h3>
+    <div class="row">
+      <div class="col-md-3">
+      	<!-- <img src="{{ url_for('static', filename='images/assets/treeimages/laureloak/laureloaktree.jpg') }}" style="width: 100%" align="left" style="padding: 150px;"> -->
+      </div>
+      <div class="col-md-9">
+        Coming Soon
+      </div>
+    </div>
+    
+    </p>
+  </div>
+
+  <div class="row">
+    <div style="text-align:center">
+      <h3 class=" bold h2padding">Walnut Mimosa's Flooring Image Gallery</h3>
+      <!-- <p><font color="#DCDCDC">Click on the images below to enlarge</p> -->
+      <h3>Coming Soon</h3>
+    </div>
+
+
+
+    <!-- The four columns
+    <!-- <div class="row container">
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar2.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar3.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <br>
+    <h5 align="right">Click X to close</h5>
+
+    <div class="containerimg">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Disclaimer: Tiles as seen in the picture gallery may vary on site due to the lighting effect from your indoor home.</p>
+    </div>
+  </div> -->
+  <!-- <br> -->
+  
+</div>
+
+{% endblock %}

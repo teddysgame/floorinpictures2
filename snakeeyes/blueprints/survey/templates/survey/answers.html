@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Survey Results{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+<style type="text/css">
+	span {
+		font-weight:bold;
+	}
+	.imgtile	{
+		width: 120px;
+		padding-left: 10px;
+		align-self: center;
+	}
+	.bold {
+		font-weight: bold;
+	}
+	  .expertimg {
+    border-radius: 50%;
+    }
+    h1 {
+    	padding: 10px;
+    }
+    .imghover:hover {
+	    transform: scale(1.5, 1.5);
+	    -ms-transform: scale(1.5, 1.5)); /* IE 9 */
+	    -webkit-transform: scale(1.5, 1.5);
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+		<h1 style="text-align:center;" class="bold"> Here are suitable colour options for your flooring</h1>
+		<h4 style="text-align:center;">Our results are based on the criteria you selected on the previous page.</h4>
+		<br>
+
+		
+		<div class="row" align="center">
+			<h1 style="text-align:center;">{{getseries1}}</h1><br>
+			<a href="{{getlinks1}}" title="{{woodname1}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic1}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks2}}" title="{{woodname2}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic2}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks3}}" title="{{woodname3}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic3}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks4}}" title="{{woodname4}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic4}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks5}}" title="{{woodname5}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic5}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks6}}" title="{{woodname6}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic6}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks7}}" title="{{woodname7}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic7}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks8}}" title="{{woodname8}}" target="_blank"><img class="imgtile imghover" src="{{getseriespic8}}" onerror="this.style.opacity='0'"></a>
+			<h1 style="text-align:center;">{{getseries2}}</h1><br>
+			<a href="{{getlinks21}}" title="{{woodname21}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic1}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks22}}" title="{{woodname22}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic2}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks23}}" title="{{woodname23}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic3}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks24}}" title="{{woodname24}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic4}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks25}}" title="{{woodname25}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic5}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks26}}" title="{{woodname26}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic6}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks27}}" title="{{woodname27}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic7}}" onerror="this.style.opacity='0'"></a><a href="{{getlinks28}}" title="{{woodname28}}" target="_blank"><img class="imgtile imghover" src="{{getseries2pic8}}" onerror="this.style.opacity='0'"></a>
+		</div>
+
+		<br>
+		<hr>
+
+		<h1 style="text-align:center;" class="bold">Interior Consultant's breakdown</h1>
+
+		<div class="row">
+			<div class="col-md-3" style="background: #f2f5f9">
+				<h3><u>Your selections</u></h3>
+				<h4>Your property: <span>{{result2}}</span></h4>
+				<h4>Flooring at: <span>{{result3}}</span></h4>
+				<h4>Your floor area is: <span>{{result4}}</span></h4>
+				<h4>Your wall colour is: <span>{{result5}}</span></h4>
+				<h4>Your furniture colour is: <span>{{result6}}</span></h4>
+				<h4>Your floor traffic is: <span>{{result7}}</span></h4>
+			</div>
+			<div class="col-md-9">
+				<div align="right">
+					<img class="expertimg" src="{{ url_for('static', filename='images/assets/team/gh.png') }}" style="width: 15%">
+      				<h5 class="bold"><font color="#DCDCDC">Expert Review: </font>Mr. Tee - Interior Consultant</h5>
+      			</div>
+				<h4>" Most large living rooms with bright coloured wall should compliment itself with dark coloured floors. It 	is recommended to heavily contrast the floor colour to the opposite of the wall colour. Since you may have bright coloured furniture, its even more ascertain to use a dark coloured tiles for your flooring. Dark coloured floors may seem to shrink the spaces of your environment cognitively but since you have a large space in your living room, it will compensate for the shrinking of your dark coloured floor. The brighter the floor colour, the larger your floor may seem. However, you do not also want too bright colour of a floor because it seems you may have heavy traffic on your floor. Heavy traffic may indicate higher frequent cleaning of the floors that may stain the floor much quicker especially the gaps between tiles will darken and be more apparent after some time. Therefore, we recommend that you go with tile colours found in the 'Elder Brilliance' and 'Earth Valley' series. The rule of thumb is, select from the recommended series and the higher the traffic of your floor, the darker the tile. "</h4>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

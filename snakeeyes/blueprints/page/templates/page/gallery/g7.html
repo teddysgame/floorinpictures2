@@ -1,0 +1,269 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Vinyl Tile{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<!-- For image gallery -->
+<style>
+
+  .h2padding{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    }
+
+  .bold {
+    font-weight:bold;
+    }
+
+  .expertimg {
+    border-radius: 50%;
+    }
+
+  .pjustify {
+    text-align: justify;
+    }
+  .ppadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .box {
+    float: left;
+    height: 100px;
+    width: 200px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    clear: both;
+    
+  }
+
+table, td, th {
+  border: 1px solid #DCDCDC;
+  padding: 5px;
+  text-align: center;
+  background-color: #FFFFFF; 
+}
+  
+</style>
+
+<!-- <form action="" method=post enctype=multipart/form-data onSubmit="return formValidation()">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+<input type="image" name=file src="{{ url_for('static', filename='images/assets/gallery/1.jpg') }}" /> -->
+
+<div class="container" align="center">
+  <h2 class="bold"><font color="green">Success!</font> We have identified 3 tiles for you!</h2>
+  <br>
+  <h3>Do you have an estimated floor area?</h3>
+  <p><font color="#DCDCDC">Key in your estimated floor area (in sqft) and click on 'Calculate'</font></p>
+  <!-- This is the form for flooring area -->
+  <script>
+  function getcost() {
+    var y = document.getElementById('price').innerHTML;
+    var y2 = document.getElementById('price2').innerHTML;
+    var y3 = document.getElementById('price3').innerHTML;
+    var z = document.getElementById("area").value;
+    var x = z * y;
+    var x2 = z * y2;
+    var x3 = z * y3;
+    var l = x + z * 1.5;
+    var l2 = x2 + z * 1.5;
+    var l3 = x3 + z * 1.5;
+    var lc = z * 1.5;
+    document.getElementById("totalcost").innerHTML = x;
+    document.getElementById("totalcostpluslabour").innerHTML = l;
+    document.getElementById("totalcostlabour").innerHTML = lc;
+    document.getElementById("totalcost2").innerHTML = x2;
+    document.getElementById("totalcostpluslabour2").innerHTML = l2;
+    document.getElementById("totalcostlabour2").innerHTML = lc;
+    document.getElementById("totalcost3").innerHTML = x3;
+    document.getElementById("totalcostpluslabour3").innerHTML = l3;
+    document.getElementById("totalcostlabour3").innerHTML = lc;
+  }
+  </script>
+
+
+  <input type="text" name="in sqft" value="750" id="area">
+  <input type=button value='Calculate' onclick="getcost()" />
+</div>
+<br>
+
+<div class="container" style="background-color:#f2f5f9">  
+  <div class="row">
+    <div class="col-md-4" align="center">
+      <br>
+      <img src="{{ url_for('static', filename='images/assets/gallery/pick/bathroom/ew.jpg') }}" style="width:100%" />
+      <h3>Your image as selected</h3>
+      <hr>
+      <!-- Dominant colour -->
+      <h3>Dominant Colour</h3>
+      <p><font color="#DCDCDC">As taken from the image</font></p>
+    <div class='box' style="background-color: rgb(127, 116, 103)";></div>
+    <br>
+    <h4><font color="rgb(127, 116, 103)"></font>rgb(127, 116, 103)</h4>
+      <div style="background: blue">
+      </div>
+      <br>
+  </div>
+
+  <br>
+
+    <div class="col-md-8">
+      <div>
+        <h3 align="center" class="bold">Top 3 closest vinyl tiles identified</h3>
+        <table align="center">
+          <col width="100px">
+          <col width="100px">
+          <col width="80px">
+          <col width="80px">
+          <col width="100px">
+          <col width="100px">
+          <col width="100px">
+          <col width="100px">
+          <tr>
+            <th></th>
+            <th>Brand</th>
+            <th>Name</th>
+<!--             <th>Code</th> -->
+<!--             <th>Views</th>
+            <th>Product Ranking</th> -->
+            <th>Price/sqft</th>
+            <th>Total</th>
+            <th>Mat. + Inst. <a title="This is the total cost of material + labour installation. Material cost per sqft x area + labour cost x area."><img src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="15px"/></a></th>
+            <th>Inst. Only</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+<!--             <th></th> -->
+<!--             <th></th>
+            <th></th> -->
+            <th>(RM)</th>
+            <th>(RM)</th>
+            <th>(RM)</th>
+            <th>(RM1.5/sqft)</th>
+          </tr>
+<!--           <tr>
+            <td><img src="{{ url_for('static', filename='images/img/5/CHERRY_PRUNUS_EUROX_4.2_LOCKING.jpg') }}" style="width:70px;height:70px;" /></td>
+            <td>Floordepot</td>
+            <td>Cherry Prunus</td>
+            <td>EU4622</td>
+            <td>1467</td>
+            <td>2/56</td>
+            <td id="price" width="100">14.5</td>
+            <td id="totalcost"></td>
+            <td id="totalcostpluslabour"></td>
+            <td id="totalcostlabour"></td>
+          </tr> -->
+          <tr>
+            <td><a href="{{ url_for('tc.southernmagnolia') }}" target="_blank"><img src="{{ url_for('static', filename='images/img/6/southernmagnolia.jpg') }}" style="width:100px;" /></a></td>
+            <td><a href="{{ url_for('page.brands') }}">Floordepot</a></td>
+            <td><a href="{{ url_for('tc.southernmagnolia') }}" target="_blank">Southern Magnolia</a></td>
+<!--             <td>{{getcode}}</td> -->
+<!--             <td>1467</td>
+            <td>2/56</td> -->
+            <td id="price" width="100">13.50</td>
+            <td id="totalcost"></td>
+            <td id="totalcostpluslabour"></td>
+            <td id="totalcostlabour"></td>
+          </tr>
+
+          <!-- Second Tile -->
+
+          <tr>
+            <td><a href="{{ url_for('tc.amarellowood') }}" target="_blank"><img src="{{ url_for('static', filename='images/img/6/amarellowood.jpg') }}" style="width:100px;" /></a></td>
+            <td><a href="{{ url_for('page.brands') }}">Floordepot</a></td>
+            <td><a href="{{ url_for('tc.amarellowood') }}" target="_blank">Amarello Wood</a></td>
+<!--             <td>{{getcode2}}</td> -->
+<!--             <td>1467</td>
+            <td>2/56</td> -->
+            <td id="price2" width="100">6.50</td>
+            <td id="totalcost2"></td>
+            <td id="totalcostpluslabour2"></td>
+            <td id="totalcostlabour2"></td>
+          </tr>
+
+          <!-- Third Tile -->
+
+          <tr>
+            <td><a href="{{ url_for('tc.tulepowood') }}" target="_blank"><img src="{{ url_for('static', filename='images/img/2/tulepowood.jpg') }}" style="width:100px;" /></a></td>
+            <td><a href="{{ url_for('page.brands') }}">Floordepot</a></td>
+            <td><a href="{{ url_for('tc.tulepowood') }}" target="_blank">Tulepo Wood</a></td>
+<!--             <td>{{getcode}}</td> -->
+<!--             <td>1467</td>
+            <td>2/56</td> -->
+            <td id="price3" width="100">15.50</td>
+            <td id="totalcost3"></td>
+            <td id="totalcostpluslabour3"></td>
+            <td id="totalcostlabour3"></td>
+          </tr>
+        </table>
+        <br>
+        <p align="center"><font color="#DCDCDC">Disclaimer: Tiles identification results may not be accurate and may vary from the uploaded image.</font></p>
+      </div>
+    </div>
+  </div>
+  <div align="center" style="padding: 20px">
+    <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}" style="width: 200px" target="_blank">Buy Now</a>
+    <a class="btn btn-warning uploadbutton" role="button" href="{{ url_for('ml.homepage') }}" style="width: 200px">Choose Again</a>
+  </div>
+  <br>
+</div>
+
+
+
+   <!-- <div>
+  <div class="row">
+    <div style="text-align:center">
+      <h3 class=" bold h2padding">Cherry Blossom's Flooring Image Gallery</h3>
+      <p><font color="#DCDCDC">Click on the images below to enlarge</p>
+    </div>
+
+ The four columns
+    <div class="row container">
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/88.jpg') }}" alt="Nature" style="width:50%" onclick="myFunction(this);" align="left">
+        <img src="{{ url_for('static', filename='images/img/5/CHERRY_PRUNUS_EUROX_4.2_LOCKING.jpg') }}" alt="Nature" style="width:50%" onclick="myFunction(this);" align="right">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/39.jpg') }}" alt="Snow" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/69.jpg') }}" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/49.jpg') }}" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <br>
+    <h5 align="right">Click X to close</h5>
+
+    <div class="containerimg">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Disclaimer: Tiles as seen in the picture gallery may vary on site due to the lighting effect from your indoor home.</p>
+    </div>
+  </div>
+  <br>
+  
+</div> -->
+<center>
+<h2 class="h2padding bold">Book an appointment with us today!</h2>
+<p><font color="#DCDCDC">Schedule a call or a site visit below!</font></p>
+<br>
+</center>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/kum-peng-han" style="min-width:320px;height:580px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+
+{% endblock %}

@@ -1,0 +1,252 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Pale Oak{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+
+<!-- For image gallery -->
+<style>
+  .h2padding{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    }
+
+  .bold {
+    font-weight:bold;
+    }
+
+  .expertimg {
+    border-radius: 50%;
+    }
+
+  .pjustify {
+    text-align: justify;
+    }
+  .ppadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+  .h3padding {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .imgpadding {
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #more {display: none;}
+</style>
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+  }
+
+function readmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='images/img/1/paleoak.jpg') }}" style="width: 70%">
+      <hr>
+      <div class="row">
+      <!-- First spec -->
+      <h4>Texture Surface</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Smooth</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 50%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Rough</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Second Spec -->
+      <div class="row">
+      <h4>Ingrained Pattern</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Mild</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 50%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Dense</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Third Spec -->
+      <div class="row">
+      <h4>Floor Density</h4>
+        <div class="col-sm-2">
+          <p style="text-align:left;"><font color="">
+          Soft</font>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 80%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <span style="float:right;"><font color="">Hard</font></span>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2 class="bold">Pale Oak</h2>
+      <h4></h4>
+      <h3>Thickness: 2mm</h3>
+      <p><font color="#DCDCDC">Note: The thicker the tile, the more expensive it will be.</font></p>
+      <h4><a href="{{ url_for('page.brands') }}">Nino Floor</a> | <a href="{{ url_for('tc.tilecollection') }}">Light Adolescence</a></h4>
+      <hr>
+      <p><font color="#DCDCDC">Disclaimer: Price is based on the average past 3 months and does not reflect prices today.</font></p>
+      <h2><font color="">RM 6.50</font></h2>
+      <h4><font color="">/sq.ft</font></h4>
+      
+      <br>
+      <h4 class="h3padding">Specification</h4>
+      <p>Suitable area : All residential to moderate commercial <br>
+      Board size : 2.0 x 152 x 914mm <br>
+      Package content : 35.90sqft / 24 panels <br>
+      Surface treatment : Embossed <br>
+      Edge treatment : Seamless</p>
+
+      <br>
+      <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}" style="width:350px" target="_blank">Get a quote for this tile</a>
+      
+    </div>
+
+    <!-- Third column -->
+    <div class="col-md-4" style="background-color:#f2f5f9">
+      <h2>Interior Advice</h2>
+      <div align="right"><img class="expertimg" src="{{ url_for('static', filename='images/assets/team/gh.png') }}" style="width: 35%">
+      <h5 class="bold"><font color="#DCDCDC">Expert Review: </font>Mr. Tee - Interior Consultant</h5>
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigemptystar.png') }}" style="width: 5%">  4/5
+      </div>
+      <p class="pjustify ppadding">Pale Oak is a grey parquet colour among the Light Adolescence series. They are one of the most popular tiles in our collections. This is because not only they go very well with bright coloured furnitures, they are having a light creamy colour that is natural to the eyes and is one of the most beautiful colour for floorings. It is extensively used in interior designing as well in commercial areas. Their bright colour will enlarge your environment to be more spacious.</p>
+      <br>
+      <h5>
+        Consider to use this colour tile if:
+      </h5>
+          <p>
+            <ul>
+              <li>You want a light flooring environment.</li>
+              <li>If you have dark coloured furnitures.<span id="dots">...</span></li>
+              <span id="more"><li>If you have bright colour walls.</li>
+              <li>You have a smaller environment.</li>
+              <li>You want a larger environement.</li>
+              </span></p>
+            </ul>
+          </p>
+          <div align="right">
+            <a href="#" button onclick="readmore()" id="myBtn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container row">
+    <h3 class="bold">Other tiles from Light Adolescence</h3>
+    <a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}" style="width: 10%"></a>
+    <a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}" style="width: 10%"></a>
+    <a href="{{ url_for('tc.oxidizedwood') }}" title="Oxidized Wood"><img src="{{ url_for('static', filename='images/img/1/oxidizedwood.jpg') }}" style="width: 10%"></a>
+    <a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}" style="width: 10%"></a>
+    <br>
+    <br>
+    <h3 class="bold">Backstory & Origins</h3>
+    <div class="row">
+      <div class="col-md-3">
+<!--         <img src="{{ url_for('static', filename='images/assets/treeimages/AmbrosiaCedar/Cedartree.jpg') }}" style="width: 100%" align="left" style="padding: 150px;"><p class="ppadding"> -->
+      </div>
+      <div class="col-md-9">
+        Coming Soon
+        <!-- <img src="{{ url_for('static', filename='images/assets/treeimages/AmbrosiaCedar/Ambrosia.jpg') }}" style="width: 50%" align="left" style="padding: 50px;"><p class="ppadding"> -->
+      </div>
+    </div>
+    
+    </p>
+  </div>
+
+  <div class="row">
+    <div style="text-align:center">
+      <h3 class=" bold h2padding">Pale Oak's Flooring Image Gallery</h3>
+      <!-- <p><font color="#DCDCDC">Click on the images below to enlarge</p> -->
+      <h3>Coming Soon</h3>
+    </div>
+
+
+
+    <!-- The four columns
+    <!-- <div class="row container">
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar2.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar3.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <br>
+    <h5 align="right">Click X to close</h5>
+
+    <div class="containerimg">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Disclaimer: Tiles as seen in the picture gallery may vary on site due to the lighting effect from your indoor home.</p>
+    </div>
+  </div> -->
+  <!-- <br> -->
+  
+</div>
+
+{% endblock %}

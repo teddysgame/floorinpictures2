@@ -1,0 +1,251 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Cherry Wood{% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+
+<!-- For image gallery -->
+<style>
+  .h2padding{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    }
+
+  .bold {
+    font-weight:bold;
+    }
+
+  .expertimg {
+    border-radius: 50%;
+    }
+
+  .pjustify {
+    text-align: justify;
+    }
+  .ppadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+  .h3padding {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .imgpadding {
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #more {display: none;}
+</style>
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+  }
+
+function readmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='images/img/4/cherrywood.jpg') }}" style="width: 70%" class="imgpadding" align="middle">
+      <hr>
+      <div class="row">
+      <!-- First spec -->
+      <h4>Texture Surface</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Smooth</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 70%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Rough</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Second Spec -->
+      <div class="row">
+      <h4>Ingrained Pattern</h4>
+        <div class="col-md-2">
+          <p style="text-align:left;"><font color="">
+          Mild</font>
+        </div>
+        <div class="col-md-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <span style="float:right;"><font color="">Dense</font></span>
+        </p>
+        </div>
+      </div>
+
+      <!-- Third Spec -->
+      <div class="row">
+      <h4>Floor Density</h4>
+        <div class="col-sm-2">
+          <p style="text-align:left;"><font color="">
+          Soft</font>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 80%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <span style="float:right;"><font color="">Hard</font></span>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2 class="bold">Cherry Wood</h2>
+      <h4>EU2341</h4>
+      <h3>Thickness: 2mm</h3>
+      <p><font color="#DCDCDC">Note: The thicker the tile, the more expensive it will be.</font></p>
+      <h4><a href="{{ url_for('page.brands') }}">Floordepot</a> | <a href="{{ url_for('tc.tilecollection') }}">Gentlemen's Leather</a></h4>
+      <hr>
+      <p><font color="#DCDCDC">Disclaimer: Price is based on the average past 3 months and does not reflect prices today.</font></p>
+      <h2><font color="">RM 6.00</font></h2>
+      <h4><font color="">/sq.ft</font></h4>
+      
+      <br>
+      <h4 class="h3padding">Specification</h4>
+      <p>Suitable area : All residential to moderate commercial <br>
+      Board size : 2.0 x 152 x 914mm <br>
+      Package content : 35.90sqft / 24 panels <br>
+      Surface treatment : Embossed <br>
+      Edge treatment : Seamless</p>
+
+      <br>
+      <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}" style="width:350px" target="_blank">Get a quote for this tile</a>
+      
+    </div>
+
+    <!-- Third column -->
+    <div class="col-md-4" style="background-color:#f2f5f9">
+      <h2>Interior Advice</h2>
+      <div align="right"><img class="expertimg" src="{{ url_for('static', filename='images/assets/team/gh.png') }}" style="width: 35%">
+      <h5 class="bold"><font color="#DCDCDC">Expert Review: </font>Mr. Tee - Interior Consultant</h5>
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">
+      <img class="expertimg" src="{{ url_for('static', filename='images/assets/others/bigstar.png') }}" style="width: 5%">  5/5
+      </div>
+      <p class="pjustify ppadding">Cherry Wood is the lightest colour and snoothest to touch among the Gentlemen's Leather series. They are suitable to be placed in living rooms, bedrooms and even bathrooms. Cherry woods are one of the most popular and favorable type of flooring material for most of the people. It is cheap and beautiful therefore we highly recommend this tile to you.</p>
+      <h5>
+        Consider to use this colour tile if:
+      </h5>
+          <p>
+            <ul>
+              <li>You want a safe colour tiles.<span id="dots">...</span></li>
+              <span id="more"><li>You want to install them in your living room, kitchen, and even bathroom.</li>
+              <li>You want a cheap alternative to parquet.</li>
+              <li>You want a light golden brown colour.</li>
+              </span></p>
+            </ul>
+          </p>
+          <div align="right">
+            <a href="#" button onclick="readmore()" id="myBtn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container row">
+    <h3 class="bold">Other tiles from Gentlemen's Leather</h3>
+    <a href="{{ url_for('tc.ambrosiacedar') }}" title="Ambrosia Cedar"><img src="{{ url_for('static', filename='images/img/4/ambrosiacedar.jpg') }}" style="width: 10%"></a>
+    <a href="{{ url_for('tc.catalpawood') }}" title="Catalapa Wood"><img src="{{ url_for('static', filename='images/img/4/catalpawood.jpg') }}" style="width: 10%"></a>
+    <a href="{{ url_for('tc.movinguiwood') }}" title="Movingui Wood"><img src="{{ url_for('static', filename='images/img/4/movinguiwood.jpg') }}" style="width: 10%"></a>
+    <br>
+    <br>
+    <h3 class="bold">Backstory & Origins</h3>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/treeimages/cherrywood/cherrywoodtree.jpg') }}" style="width: 100%" align="left" style="padding: 50px;"><p class="ppadding">
+      </div>
+      <div class="col-md-9">
+        Cherry Wood is a genus of Prunus of avium, cerasus, or serotine. Their common names are black cherry, American cherry or simply just cherry. As their name suggests, Cherry wood is wood harvested from cherry fruit trees. It is a popular fruit and famously goes well with cakes.<br>
+        Cherry Wood is often used for cabinets, furniture and even toys. It is extremely heavy and durable which is why they make great wood for carpentry.<br>
+        Their grain patterns with its soft glazed and rich colours make the wood stunningly beautiful.<br>
+        <img src="{{ url_for('static', filename='images/assets/treeimages/cherrywood/cherry.jpg') }}" style="width: 20%" align="left" style="padding: 50px;">
+      </div>
+    </div>
+    
+    </p>
+  </div>
+
+  <div class="row">
+    <div style="text-align:center">
+      <h3 class=" bold h2padding">Cherry Wood's Flooring Image Gallery</h3>
+      <!-- <p><font color="#DCDCDC">Click on the images below to enlarge</p> -->
+      <h3>Coming Soon</h3>
+    </div>
+
+
+
+    <!-- The four columns
+    <!-- <div class="row container">
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar2.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="col-md-3">
+        <img src="{{ url_for('static', filename='images/assets/Gallery/4/ambrosiacedar3.jpg') }}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <br>
+    <h5 align="right">Click X to close</h5>
+
+    <div class="containerimg">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Disclaimer: Tiles as seen in the picture gallery may vary on site due to the lighting effect from your indoor home.</p>
+    </div>
+  </div> -->
+  <!-- <br> -->
+  
+</div>
+
+{% endblock %}

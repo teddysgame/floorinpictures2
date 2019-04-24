@@ -1,0 +1,475 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Frequently asked questions (FAQ){% endblock %}
+{% block heading %}{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+  .fixed {
+    position: fixed;
+  }
+  .header{
+  top: 50px;
+  left: 100px;
+  right: 100px;
+  height: 42px;
+  background-color: #FFFFFF;
+  }
+/*  .scrollable {
+    height: 2000px;
+    width: 500%;
+    margin: 0 auto;
+    border: 1px dashed black;   
+  }*/
+
+  .h2padding{
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+</style>
+
+<div class="fixed header">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.general') }}">General</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.technical') }}">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('page.installation') }}">Installation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.maintenance') }}">Maintenance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.durability') }}">Durability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.brand') }}">Brand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.health') }}">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.costing') }}">Costing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.warranty') }}">Warranty</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('page.others') }}">Others & Consideration</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="bold h2padding">Installation</h2>
+<p> Click on a question for an answer. We encourage you to read through the FAQ titles as much as you can before proceeding with any installation works. You can however also contact us directly on <a href="https://api.whatsapp.com/send?phone=60166850069">whatsapp</a> or contact us <a href="{{ url_for('contact.index') }}">here</a></p>
+<br>
+
+<div>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. How to install vinyl flooring on wall or ceiling?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Installation on walls are quite similar to installing on floors.If you are interested to DIY vinyl tiles on wall, we recommend you to watch this Youtube video for more information.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Can vinyl flooring be installed above parquet without hacking?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Yes you may. Just ensure that you use underlayments that has moisture insulation properties to avoid air bubbles.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Can vinyl flooring be installed above tiles without hacking?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Yes you may. Many people just lay their vinyl tiles above existing tiles and skipped the hacking process. Tiles are commonly already even out and is convenient to just lay vinyl tiles above it. Do consider underlayment to add to sound insulation.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+          4. What is a floating vinyl flooring?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Floating vinyl flooring simply means vinyl that is laid above an underlayment and not directly glued down to the subfloor. The reason underlayment is needed for floating without gluing down is because it will make your subfloor louder and prone to damage.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingfive">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+          5. Does floating series vinyl need adhesive during installation? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>No, adhesive is no longer necessary. You will not feel the difference.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingsix">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+          6. What are the preparations needed before the installation of vinyl floorings. 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>It highly depends on your type of subfloor. Different subfloor have different methods to test.
+        <br>
+        Concrete subfloor
+        <ul>
+          <li>
+            Test the concrete subfloor by taping the floor and leaving it for 72 hours. If the tape is easily peeled off, the floor is too damn for vinyl and has to be insulated.
+          </li>
+          <li>
+            Clean the floor of debris and dust preferably using a vacuum.
+          </li>
+          <li>
+            Use a carpenter’s level or anything long (1 meter) and straight to locate uneven surface levelness.
+          </li>
+          <li>
+            Use floor leveling compound if necessary.
+          </li>
+          <li>
+            Sand off the floor if leveling compound is used.
+          </li>
+        </ul>
+          <br>
+        Wooden subfloor
+        <ul>
+          <li>
+            Clean the floor of debris and dust preferably using a vacuum.
+          </li>
+          <li>
+            It is encourage to lay plywood panels as underlayment.
+          </li>
+          <li>
+            Ensure there are some spacing at the corner for expansion and shrinkage.
+          </li>
+          <li>
+            Any bumps or irregularities in its surface can cause the vinyl flooring to wear, or prone to tear.
+          </li>         
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+          7. What are the preparations needed before the installation of wall?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Strip all existing tiles before installing new ones. The vinyls can be too heavy if being installed on directly to existing tiles.
+        <br>
+        Ensure that the wall has an even surface and close up all holes inside it.
+        <br>
+        Clean the wall thoroughly with wet cloth to remove any dust or sand. Dust and sand will affect the quality of stickiness of the glue and become a problem in the long run.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+          8. Do I need to lay underlays if I am installing vinyl flooring for wall?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>No, it is not necessary. The underlayment acts as a protection, sound insulator, moisture insulator and thermal resistance. Most walls do not have impact on them since there will be little to no traffic. Therefore sound and damage from impact is close to nonexistent. Thermal insulation itself is more than adequate to block heat from an external side of the wall. Moisture may accumulate if you’re building it on ground floors and in the toilet or bathroom but it is not going to build up from your upper levels.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+          9. How to install skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          Step 1
+          <br>
+          <ul>
+            <li>Get the right measurements. Unlike tiles which may allow for wastage up to 10%, a skirting’s wastage would be quite substantial. The proper rule of thumb is to follow the saying ‘measure twice, cut once.’</li>
+          </ul>
+          <br>
+          Step 2
+          <br>
+          <ul>
+            <li>
+            For angles, always cut your skirting at 45 degrees. Use a miter box to help with getting the perfect angle.
+            </li>
+          </ul>
+          <br>
+          Step 3
+          <ul>
+            <li>
+            Cut the coping or scribbing joints. A scribbing joint is where 2 skirting boards meet at the inner corner. This part is slightly more difficult but it can be done. Do check out our Youtube video below.
+            </li>
+          </ul>
+          <br>
+          Step 4
+          <br>
+          <ul>
+            <li>
+              Cut and attach the skirting boards with nails. Refrain from using a hammer if you can. You may use a nail gun for quicker and safer installation.
+            </li>
+          </ul>
+          <br>
+          Step 5
+          <br>
+          <ul>
+            <li>
+              Use putty to cover up nail holes.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+          10. Use putty to cover up nail holes.
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is. Floor heavier loading just ensure the load of the frame and pictures are transferred to the wall instead of the vinyl itself.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+          11. Is it okay to drill holes in vinyl tiles for walls?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is. There may be a slight risk of moisture barrier penetration however it should be fine if there is no gap for moisture to enter. Seal up any holes not in use if necessary.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+          12. Should I install vinyl floorings first or install my cabinets first?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Generally you should always install your vinyl floorings first before you install your cabinets. Here is why.
+          <ul>
+            <li>You are able to change your cabinet footprint later without the need to retile.</li>
+            <li>It looks a lot cleaner without the end profiles.</li>
+            <li>You may accidentally scratch your cabinet during installation.</li>
+            <li>Some people would save some money on the floorings that is covered by the cabinets however it is not recommended.</li>
+            <li>Unlike timber floorings that lifespan may not be as long as the cabinet and may need retiling later, vinyl tiles generally have longer lifespan and will not need any replacement before cabinets.</li>
+            <li>The workmanship will be a lot better since there will not be working in a limited working space and its less complicated especially on the scribbing part.</li>
+            <li>You do not need to worry on blocking off water spill.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">
+          13. In what situation should I install my cabinets first?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>This is a very subjective issue. You should only consider installing your cabinets first only if you are using floating vinyl floorings. This is because vinyl floorings contract and expand and may cause the flooring to buckle. However if you have a stable weather (without 4 seasons), it is not known to have contraction and expansion that big to cause buckles around cabinets. However do advise your installer on this matter.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading14">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+          14. Can I install vinyl flooring if there is an existing cabinet?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Yes it is possible to install vinyl flooring when there are already existing cabinets.
+          <br>
+          They will use end profiles to cover up the edges of cabinets and also spaces that is allowed for contracting and expanding.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading15">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+          15. Do we need to repaint the MDF skirting?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Most skirtings have various colours to match with the existing flooring colours especially with MDF skirtings. It is additional labour to repaint it therefore we do not recommend it.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading16">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+          16. What is the vinyl flooring installation progress? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>There are mainly 3 stages during vinyl installation.
+          <br>
+          Stage 1 – cleaning
+          <br>
+          <ul>
+            <li>
+              During this phase installers will be cleaning the floor from debris by vacuum and mopping and ensuring there is an even surface to work on.
+            </li>
+          </ul>
+          <br>
+          Stage 2 - laying
+          <br>
+          <ul>
+            <li>
+              During this phase installers will be cleaning the floor from debris by vacuum and mopping and ensuring there is an even surface to work on.
+            </li>
+            <li>
+              Underlayment will start here.
+            </li>
+            <li>
+              If there is no underlayment, gluing, cutting and laying will take place here.
+            </li>
+          </ul>
+          <br>
+          Stage 3 - Skirting
+          <br>
+          <ul>
+            <li>
+              Skirts are cut and installed.
+            </li>
+          </ul>
+          <br>
+          Our installers will send progressive reports for you to ensure all steps are not missed and taken carefully.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading17">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+          17. How can I ensure my contractor adhere to proper steps and process?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>If you are engaging with an installer outside, it is always important to check for previous jobs. Ask them questions and compared their answers with us. You will be able to tell an experience installer apart.
+          <br>
+          The best way to ensure an installer that adheres to proper steps is to supervise them yourself.
+          <br>
+          Or you may engage one of our installer to install it for you. The difference is our installers are required to send progressive reports to us to be able to claim their full commission. And since our installation rates are paid slightly higher than others, they are more dedicated towards their installation works. Our higher rates also attract better installers with better workmanship. It will save you lots of worries for days to come.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
