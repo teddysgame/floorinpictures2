@@ -12,7 +12,7 @@ services:
   website:
     build: .
     command: >
-      gunicorn -b 128.199.164.229:8000
+      gunicorn -b 0.0.0.0:8000
         --access-logfile -
         --reload
         "snakeeyes.app:create_app()"
