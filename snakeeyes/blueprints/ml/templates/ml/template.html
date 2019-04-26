@@ -48,24 +48,40 @@ table, td, th {
 	
 </style>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script type="text/javascript">
     $(window).on('load',function(){
-        $('#myModal').modal('show');
+        $('#exampleModal').modal('show');
     });
 </script>
 
 <!-- Modal -->
+<!-- <div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div> -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tip</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tips for using our search.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img src="{{ url_for('static', filename='images/assets/others/modal.png') }}">
+        <img src="{{ url_for('static', filename='images/assets/others/modal.png') }}" style="width:100%;">
         <h4>Key in a floor area to get an estimate of your floor.</h4>
       </div>
       <div class="modal-footer">
@@ -81,8 +97,8 @@ table, td, th {
 
   <br>
   <div class="container" style="background-color:#f2f5f9">
-    <h3>Do you have an estimated floor area?</h3>
-    <p><font color="#DCDCDC">Key in your estimated floor area (in sqft) and click on 'Calculate'</font></p>
+    <h2>Do you have an estimated floor area?</h3>
+    <p>Key in your estimated floor area (in sqft) and click on 'Calculate'</p>
     <!-- This is the form for flooring area -->
     <script>
     function getcost() {
