@@ -338,15 +338,15 @@ def homepage():
         return render_template('ml/template.html',
          imagesource='../static/images/uploads/' + filename, 
          getwoodpic1='../static/images/img/all/' + getwood + '.jpg', 
-          getwoodlink='http://192.168.99.100:8000/' + getwoodlink,
+          getwoodlink='http://128.199.164.229:8000/' + getwoodlink,
            T10=T10, DC=DC, getwood=getwood, getprice=getprice, getcode=getcode,
             getthickness=getthickness,getspec=getspec,
              getwoodpic2='../static/images/img/all/' + getwood2 + '.jpg',
-             getwoodlink2='http://192.168.99.100:8000/' + getwoodlink2,
+             getwoodlink2='http://128.199.164.229:8000/' + getwoodlink2,
               getwood2=getwood2, getprice2=getprice2, getcode2=getcode2,
                getthickness2=getthickness2,getspec2=getspec2,
                 getwoodpic3='../static/images/img/all/' + getwood3 + '.jpg',
-                getwoodlink3='http://192.168.99.100:8000/' + getwoodlink3,
+                getwoodlink3='http://128.199.164.229:8000/' + getwoodlink3,
                  getwood3=getwood3, getprice3=getprice3, getcode3=getcode3,
                   getthickness3=getthickness3, getspec3=getspec3)
         #return render_template('ml/template.html', imagesource='../static/images/uploads/' + filename, T10=T10, DC=DC, getwood=getwood, getprice=getprice, getcode=getcode, getthickness=getthickness,getspec=getspec, getwood2=getwood2, getprice2=getprice2, getcode2=getcode2, getthickness2=getthickness2,getspec2=getspec2, getwood3=getwood3, getprice3=getprice3, getcode3=getcode3, getthickness3=getthickness3, getspec3=getspec3)

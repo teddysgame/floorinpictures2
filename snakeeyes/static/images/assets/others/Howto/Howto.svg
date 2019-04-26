@@ -83,10 +83,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="613.39272"
-     inkscape:cy="-1073.3482"
+     inkscape:cx="-2783.7396"
+     inkscape:cy="1402.0707"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1266"
+     inkscape:current-layer="g1212"
      showgrid="false"
      showguides="true"
      inkscape:window-width="1366"
@@ -102,7 +102,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -251,9 +251,9 @@
        id="g1212"
        transform="translate(0,7.704614)">
       <g
-         inkscape:export-ydpi="100"
-         inkscape:export-xdpi="100"
-         inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\Project 1142\snakeeyes\static\images\assets\others\How2.png"
+         inkscape:export-ydpi="50"
+         inkscape:export-xdpi="50"
+         inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\floorinpictures\snakeeyes\static\images\assets\others\How22.png"
          transform="translate(264.58334,18.898806)"
          id="g826-7">
         <path
@@ -783,9 +783,9 @@
          d="m 275.75605,801.83642 c -29.06707,-5.42498 -52.43596,-25.24702 -61.97448,-52.56823 -7.78912,-22.31041 -5.21116,-48.27887 6.74434,-67.93754 11.97646,-19.69315 30.1373,-32.69817 52.65781,-37.7084 7.55309,-1.68036 25.51982,-1.68036 33.07291,0 31.66658,7.04499 55.24954,30.62553 62.34078,62.33438 0.87826,3.92719 1.22783,8.89341 1.21575,17.27141 -0.0143,9.93624 -0.28453,12.7847 -1.74286,18.37384 -7.67645,29.42054 -29.68584,51.52893 -58.87386,59.13871 -8.2406,2.14846 -24.87902,2.6937 -33.44039,1.09583 z m 55.31119,-79.52707 0.18966,-42.81105 h -41.5308 -41.53081 v 43.00091 43.00091 l 41.34114,-0.18986 41.34115,-0.18986 z m -71.11269,-0.59287 v -15.84316 l 2.79784,1.6953 c 10.63193,6.44224 22.90718,14.24941 22.88803,14.55699 -0.0126,0.20211 -4.95392,3.75745 -10.98074,7.90075 -6.86398,4.71883 -11.65786,7.53328 -12.8315,7.53328 h -1.87363 z m 21.38947,4.96506 c 8.64913,-5.98295 16.14382,-11.13168 16.65487,-11.44164 0.61539,-0.37323 5.0036,3.30044 12.99398,10.8781 l 12.0648,11.44164 H 294.338 265.61833 Z"
          id="path832-9-0"
          inkscape:connector-curvature="0"
-         inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\Project 1142\snakeeyes\static\images\assets\others\How31.png"
-         inkscape:export-xdpi="100"
-         inkscape:export-ydpi="100" />
+         inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\floorinpictures\snakeeyes\static\images\assets\others\How31.png"
+         inkscape:export-xdpi="50"
+         inkscape:export-ydpi="50" />
       <path
          style="fill:#2ca05a;stroke-width:0.73495376"
          d="m 268.04444,784.29789 -18.73591,-18.81001 h 40.96826 40.96826 v -42.43837 -42.43838 l 19.54491,19.47107 19.54489,19.47107 -0.41006,7.71702 c -2.15745,40.60048 -34.82659,73.26965 -75.42742,75.42749 l -7.71701,0.41013 z m -8.08989,-62.58141 v -15.84316 l 2.79784,1.6953 c 10.63193,6.44224 22.90718,14.24941 22.88803,14.55699 -0.0126,0.20211 -4.95392,3.75745 -10.98074,7.90075 -6.86398,4.71883 -11.65786,7.53328 -12.8315,7.53328 h -1.87363 z m 21.38947,4.96506 c 8.64913,-5.98295 16.14382,-11.13168 16.65487,-11.44164 0.61539,-0.37323 5.0036,3.30044 12.99398,10.8781 l 12.0648,11.44164 H 294.338 265.61833 Z"
@@ -998,9 +998,9 @@
        inkscape:export-ydpi="100" />
     <g
        id="g294"
-       inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\Project 1142\snakeeyes\static\images\assets\others\how13.png"
-       inkscape:export-xdpi="100"
-       inkscape:export-ydpi="100">
+       inkscape:export-filename="C:\Users\Peggy Cheong\Desktop\floorinpictures\snakeeyes\static\images\assets\others\how13.png"
+       inkscape:export-xdpi="50"
+       inkscape:export-ydpi="50">
       <g
          inkscape:export-ydpi="100"
          inkscape:export-xdpi="100"

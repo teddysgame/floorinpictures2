@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %}
 {% import 'macros/form.html' as f with context %}
 
-{% block title %}Floor in Pictures: Everything about vinyl flooring in Malaysia{% endblock %}
+{% block title %}A floor in Pictures: Everything about vinyl flooring in Malaysia{% endblock %}
 {% block meta_description %}Explore over hundreds of vinyl floorings from dozens of suppliers all on a single platform!{% endblock %}
 
 {% block body %}
@@ -57,12 +57,12 @@ body {
 }
 
 .h1larger {
-  font-size: 55px;
+  font-size: 4vw;
 }
 </style>
 
 <!-- Banner -->
-<div class="bannercontainer" id="targetsearch">
+<div class="bannercontainer container" id="targetsearch">
   <img src="{{ url_for('static', filename='images/assets/others/large.png') }}" alt="text" style="width: 100%;">
   <div class="centered">
     <h1 class="textshadow h1larger">Let us help you search for the perfect vinyl floor!</h1>
@@ -275,7 +275,7 @@ body {
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 container">
         <br>
         <br>
         <br>
@@ -285,7 +285,7 @@ body {
         <br>
         <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('survey.surveys') }}">Take the survey</a>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8 container">
         <img src="{{ url_for('static', filename='images/assets/others/slr.png') }}" style="width: 70%;" class="surveypadding">
       </div>      
     </div>    
@@ -307,8 +307,7 @@ body {
   </div>
       
   <br>
-
-  <div class="row"> 
+<div class="row">
     <div class="column containerimg">
       <a href="{{ url_for('page.g1') }}"><img src="{{ url_for('static', filename='images/assets/gallery/pick/livingroom/cp.jpg') }}" style="width:100%" alt="Avatar" class="image"></a>
       <!-- <div class="overlay">Living Room</div> -->
@@ -341,6 +340,7 @@ body {
 
     </div>
   </div>
+    
 
   <!-- Gallery should end here -->
   <!-- Top sellers -->
@@ -371,7 +371,7 @@ body {
   </style>
 
   <!-- Get months for table -->
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     function myFunction() {
       var d = new Date();
       var n = d.getMonth();
@@ -456,7 +456,7 @@ body {
     }
 
     window.onload = myFunction;
-  </script>
+  </script> -->
 
 <!-- This is tile collection -->
 
@@ -472,20 +472,20 @@ body {
         <H2 class="h2padding bold">Dive right in to our collection!</H2>
         <!-- <h4>Unsure of a colour? Let's find out!</h4> -->
         <br>
-        <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('tc.tilecollection') }}">Go to album</a>
+        <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('tc.tilecollection') }}" align="center">Go to album</a>
       </div>
-      <div class="col-md-6" align="right">
+      <div class="col-md-6">
         <br>
         <br>
         <br>
         <br>
         <br>
         <!-- <h3>Light Adolesense</h3> -->
-        <a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}"></a><a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}"></a><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}"></a><a href="{{ url_for('tc.oxidizedwood') }}" title="Oxidized Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/oxidizedwood.jpg') }}"></a><a href="{{ url_for('tc.paleoak') }}" title="Pale Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/paleoak.jpg') }}"></a><br>
+        <a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}"></a><a href="{{ url_for('tc.pratooak') }}" title="Prato Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/pratooak.jpg') }}"></a><a href="{{ url_for('tc.francemaple') }}" title="France Maple"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/francemaple.jpg') }}"></a><a href="{{ url_for('tc.oxidizedwood') }}" title="Oxidized Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/1/oxidizedwood.jpg') }}"></a><br>
         <!-- <h3>Elder Brilliance</h3> -->
-        <a href="{{ url_for('tc.balsawood') }}" title='Balsa Wood'><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/balsawood.jpg') }}"></a><a href="{{ url_for('tc.easternhemlock') }}" title="Eastern Hemlock"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/easternhemlock.jpg') }}"></a><a href="{{ url_for('tc.spruceomorika') }}" title="Spruce Omorika"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/spruceomorika.jpg') }}"></a><a href="{{ url_for('tc.tulepowood') }}" title="Tulepo Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/tulepowood.jpg') }}"></a><a href="{{ url_for('tc.oakfalcata') }}" title="Oak Falcata"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/oakfalcata.jpg') }}"></a><br>
+        <a href="{{ url_for('tc.balsawood') }}" title='Balsa Wood'><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/balsawood.jpg') }}"></a><a href="{{ url_for('tc.easternhemlock') }}" title="Eastern Hemlock"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/easternhemlock.jpg') }}"></a><a href="{{ url_for('tc.spruceomorika') }}" title="Spruce Omorika"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/spruceomorika.jpg') }}"></a><a href="{{ url_for('tc.tulepowood') }}" title="Tulepo Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/2/tulepowood.jpg') }}"></a><br>
         <!-- <h3>Solid Wood</h3> -->
-        <a href="{{ url_for('tc.blackwood') }}" title="Black Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/blackwood.jpg') }}"></a><a href="{{ url_for('tc.boxelderwood') }}" title="Boxelder Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/boxelderwood.jpg') }}"></a><a href="{{ url_for('tc.fanooak') }}" title="Fano Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/fanooak.jpg') }}"></a><a href="{{ url_for('tc.hazelplum') }}" title="Hazel Plum"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/hazelplum.jpg') }}"></a><a href="{{ url_for('tc.oakespana') }}" title="Oak Espana"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/oakespana.jpg') }}"></a>
+        <a href="{{ url_for('tc.blackwood') }}" title="Black Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/blackwood.jpg') }}"></a><a href="{{ url_for('tc.boxelderwood') }}" title="Boxelder Wood"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/boxelderwood.jpg') }}"></a><a href="{{ url_for('tc.fanooak') }}" title="Fano Oak"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/fanooak.jpg') }}"></a><a href="{{ url_for('tc.hazelplum') }}" title="Hazel Plum"><img class="imgtile imghover" src="{{ url_for('static', filename='images/img/3/hazelplum.jpg') }}"></a>
         <br>
         <br>
         <br>
@@ -494,10 +494,9 @@ body {
   </div>
   <hr>
 
-  <h2 class="bold h2padding">Top 3 best sellers in the past 3 months</h2>
+  <!-- <h2 class="bold h2padding">Top 3 best sellers in the past 3 months</h2>
   <h4>These are what the awesome vinyl communities are choosing</h4>
   <h4><font color="#DCDCDC">Click on a tile for more info</font></h4>
-  <!--   -->
   <br>
   <div>
     <table class="tabletops">
@@ -527,9 +526,9 @@ body {
         <td><a href="{{ url_for('tc.trentooak') }}" title="Trento Oak"><img src="{{ url_for('static', filename='images/img/1/trentooak.jpg') }}" style="height:100px; width:100px"></a></td>
       </tr>
     </table>
-  </div>
+  </div> -->
 
-  <h6 class="textpadding"><font color="#DCDCDC">based on our in-house data from thousands of orders from all suppliers</font></h6>
+  <!-- <h6 class="textpadding"><font color="#DCDCDC">based on our in-house data from thousands of orders from all suppliers</font></h6> -->
 
   <style type="text/css">
     .imgasseen {
@@ -540,7 +539,7 @@ body {
   <!-- Brands we carry -->
   <div class="row">
     <div class="col-md-3">
-      <a href="{{ url_for('page.brands') }}"><img class="imgasseen" src="{{ url_for('static', filename='images/assets/brands/floordepot.png') }}" align="left" style="width: 60%;"></a>
+      <a href="{{ url_for('page.brands') }}"><img class="imgasseen" src="{{ url_for('static', filename='images/assets/brands/floordepot.png') }}" align="center" style="width: 60%;"></a>
     </div>
     <div class="col-md-9">
       <h2 class="bold h2padding" align="center">What are we?</h2>
@@ -554,7 +553,7 @@ body {
   <h2 class="bold h2padding">Top 5 frequently asked questions for vinyl flooring</h2>
   <h4><font color="#DCDCDC">We curate from thousands of questions from customers and online just for you.</font></h4>
   <br>
-  <div>
+  <div class="container">
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -594,7 +593,7 @@ body {
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              2. What is the difference between vinyl flooring versus laminate flooring?
+              2. What is the difference between vinyl and laminate flooring?
             </button>
           </h2>
         </div>
@@ -608,7 +607,7 @@ body {
         <div class="card-header" id="headingThree">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              3. What are the common problems that will arise on vinyl floorings?
+              3. What are the common problems in vinyl floorings?
             </button>
           </h2>
         </div>
@@ -661,6 +660,7 @@ body {
       </div>
     </div>
   </div>
+
   <h4 class="textpadding">Got more questions? visit our <a href="{{ url_for('page.general') }}">FAQ.</a></h4>
   <hr>
 
@@ -718,12 +718,30 @@ body {
       padding-right: 150px;
     }
   </style>
-  <img src="{{ url_for('static', filename='images/assets/others/Advantage.png') }}" class="imgasseen" style="width: 70%">
+  <img src="{{ url_for('static', filename='images/assets/others/advantage.png') }}" class="imgasseen" style="width: 80%">
 
   <!-- Meet the team -->
-  <h2 class="bold h2padding">Meet the team and installers!</h2>
-  <h4>We are a team of local installers ready to help you transform your flooring</h4>
-  <img src="{{ url_for('static', filename='images/assets/team/team.png') }}" class="imgasseen" style="width: 90%">
+  <div class="container">
+    <h2 class="bold h2padding">Meet the team!</h2>
+    <h4>We are a team of good friends ready to help you transform your flooring</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/assets/team/penghan.png') }}" class="imgasseen" style="width: 50%"><br>
+        <h4>Han</h4>
+        <h5>Flooring consultant</h5>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/assets/team/kenneth.png') }}" class="imgasseen" style="width: 50%"><br>
+        <h4>Kenneth</h4>
+        <h5>Flooring Specialist</h5>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/assets/team/guanhui.png') }}" class="imgasseen" style="width: 50%"><br>
+        <h4>Tee</h4>
+        <h5>Interior Consultant</h5>
+      </div>
+    </div>
+  </div>
   
   <hr>
   <!-- Warranty -->
@@ -731,15 +749,23 @@ body {
     <h2 class="bold h2padding">Goodbye defects and cut throats.</h2>
     <h4><font color="#DCDCDC">Why buy from us?</font></h4>
     <br>
-    <img src="{{ url_for('static', filename='images/assets/others/warranties.png') }}" align="left" style="width:20%">
-    <br>
-    <h4 class="h4padding">We <span class="bold">protect you</span> from cut throats by nasty installers that supplies you with inferior <span><font color="red">toxic</font></span> tile products. We will delivery tiles directly from the manufacturers to your site address. All our tiles comes with a genuine certificate.
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/assets/others/warranties.png') }}" align="center" style="width:70%">
+      </div>
       <br>
+      <div class="col-md-8">
+        <h4>We <span class="bold">protect you</span> from cut throats by nasty installers that supplies you with inferior <span><font color="red">toxic</font></span> tile products. We will delivery tiles directly from the manufacturers to your site address. All our tiles comes with a genuine certificate.
+        <br>
+        <br>
+        <br>
+        In case of defects, just snap a photo and send it to us and we will replace a new tile to you no questions ask!</h4>
+      </div>
       <br>
-
-    In case of defects, just snap a photo and send it to us and we will replace a new tile to you no questions ask!</h4>
-    <br>
+    </div>
   </div>
+  <br>
+  <br>
   <a class="btn btn-success uploadbutton" role="button" href="{{ url_for('contact.index') }}">Get me protected</a>
 
   <!-- DIY -->

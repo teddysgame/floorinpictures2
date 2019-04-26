@@ -48,9 +48,32 @@ table, td, th {
 	
 </style>
 
-<!-- <form action="" method=post enctype=multipart/form-data onSubmit="return formValidation()">
-<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-<input type="image" name=file src="{{ url_for('static', filename='images/assets/gallery/1.jpg') }}" /> -->
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tip</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="{{ url_for('static', filename='images/assets/others/modal.png') }}">
+        <h4>Key in a floor area to get an estimate of your floor.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container" align="center">
   <h2 class="bold"><font color="green">Success!</font> We have identified 3 tiles for you!</h2>
