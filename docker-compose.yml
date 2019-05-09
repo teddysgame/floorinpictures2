@@ -22,6 +22,10 @@ services:
       - '.:/snakeeyes'
     ports:
       - '8000:8000'
+    networks:
+      mydomainname:
+        aliases:
+          - afloorinpictures.co
 
   celery:
     build: .
@@ -33,3 +37,6 @@ services:
 
 volumes:
   redis:
+
+networks:
+  mydomainname:
